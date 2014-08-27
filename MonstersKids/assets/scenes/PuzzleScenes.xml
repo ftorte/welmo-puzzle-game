@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scenes xmlns="http://www.example.org/scene">
+    <scene name="PuzzleMonster00" sceneFather="MenuPuzzles01" class_name="com.welmo.andengine.scenes.PuzzleScene">
+         <event_handler ID ="1000" event="ON_CLICK">
+        <modifier_list execution_order="SERIAL" UniqueName="ZoomInOut">
+          <modifier ID="2" typeSet="false" type="SCALE" scale_begin="1" scale_end="1.5"/> 
+          <modifier ID="2" typeSet="false" type="SCALE" scale_begin="1.5" scale_end="1"/> 
+        </modifier_list>
+        <pre_mod_action ID="1" type="CHANGE_Z_ORDER" pz="100"/>
+        <post_mod_action ID="1" type="CHANGE_Z_ORDER" pz="1"/>
+        <post_mod_action ID="4" type="CHANGE_SCENE" next_scene="MainMenu"/>
+      </event_handler>
+      <background ID="100" type="SPRITE" >
+          <sprite ID="101" width="1280" height="800" pz="0" px="0" py="0" resourceName="sky" type="STATIC"></sprite>
+      </background>
+      <puzzle_sprite ID="201" height="800" width="1280"  px="0" py="0" resourceName="RgnDynamicTLDMonster01" hasWhiteBackground="true" 
+          nbOfColumns="4" nbOfRows="4" puzzleZone="600;100;600;600" puzzleBox="50;50;500;700" ActiveZone ="true" 
+          ActiveBorder="true" HelperImage="RgnMonster01"> 
+      </puzzle_sprite>        
+    </scene>
+    <instantiatescene name="PuzzleMonster01" 	masterscene="PuzzleMonster00" parametersList="monsters/monster01.png;RgnMonster01;4;4;MenuPuzzles01"/>
+    <instantiatescene name="PuzzleMonster02" 	masterscene="PuzzleMonster00" parametersList="monsters/monster02.png;RgnMonster02;4;4;MenuPuzzles01"/>
+    <instantiatescene name="PuzzleMonster03" 	masterscene="PuzzleMonster00" parametersList="monsters/monster03.png;RgnMonster03;8;8;MenuPuzzles01"/>
+    <instantiatescene name="PuzzleMonster04" 	masterscene="PuzzleMonster00" parametersList="monsters/monster04.png;RgnMonster04;10;10;MenuPuzzles01"/>
+    <instantiatescene name="PuzzleMonster05" 	masterscene="PuzzleMonster00" parametersList="monsters/monster05.png;RgnMonster05;2;2;MenuPuzzles01"/>
+    <instantiatescene name="PuzzleMonster06" 	masterscene="PuzzleMonster00" parametersList="monsters/monster06.png;RgnMonster06;4;4;MenuPuzzles01"/>
+    <instantiatescene name="PuzzleMonster07" 	masterscene="PuzzleMonster00" parametersList="monsters/monster07.png;RgnMonster07;4;4;MenuPuzzles01"/>
+    <instantiatescene name="PuzzleMonster08" 	masterscene="PuzzleMonster00" parametersList="monsters/monster08.png;RgnMonster08;4;4;MenuPuzzles01"/>
+    
+    <instantiatescene name="PuzzleMonster09" 	masterscene="PuzzleMonster00" parametersList="monsters/monster09.png;RgnMonster09;4;4;MenuPuzzles02"/>
+    <instantiatescene name="PuzzleMonster10" 	masterscene="PuzzleMonster00" parametersList="monsters/monster10.png;RgnMonster10;4;4;MenuPuzzles02"/>
+    <instantiatescene name="PuzzleMonster11" 	masterscene="PuzzleMonster00" parametersList="monsters/monster11.png;RgnMonster11;4;4;MenuPuzzles02"/>
+    <instantiatescene name="PuzzleMonster12" 	masterscene="PuzzleMonster00" parametersList="monsters/monster12.png;RgnMonster12;4;4;MenuPuzzles02"/>
+    <instantiatescene name="PuzzleMonster13" 	masterscene="PuzzleMonster00" parametersList="monsters/monster13.png;RgnMonster13;4;4;MenuPuzzles02"/>
+    <instantiatescene name="PuzzleMonster14" 	masterscene="PuzzleMonster00" parametersList="monsters/monster14.png;RgnMonster14;4;4;MenuPuzzles02"/>
+    <instantiatescene name="PuzzleMonster15" 	masterscene="PuzzleMonster00" parametersList="monsters/monster15.png;RgnMonster15;4;4;MenuPuzzles02"/>
+    <instantiatescene name="PuzzleMonster16" 	masterscene="PuzzleMonster00" parametersList="monsters/monster16.png;RgnMonster16;4;4;MenuPuzzles02"/>
+    
+    <instantiatescene name="PuzzleMonster17" 	masterscene="PuzzleMonster00" parametersList="monsters/monster17.png;RgnMonster17;4;4;MenuPuzzles03"/>
+    <instantiatescene name="PuzzleMonster18" 	masterscene="PuzzleMonster00" parametersList="monsters/monster18.png;RgnMonster18;4;4;MenuPuzzles03"/>
+    <instantiatescene name="PuzzleMonster19" 	masterscene="PuzzleMonster00" parametersList="monsters/monster19.png;RgnMonster19;4;4;MenuPuzzles03"/>
+    <instantiatescene name="PuzzleMonster20" 	masterscene="PuzzleMonster00" parametersList="monsters/monster20.png;RgnMonster20;4;4;MenuPuzzles03"/>
+    <instantiatescene name="PuzzleMonster21" 	masterscene="PuzzleMonster00" parametersList="monsters/monster21.png;RgnMonster21;4;4;MenuPuzzles03"/>
+    <instantiatescene name="PuzzleMonster22" 	masterscene="PuzzleMonster00" parametersList="monsters/monster22.png;RgnMonster22;4;4;MenuPuzzles03"/>
+    <instantiatescene name="PuzzleMonster23" 	masterscene="PuzzleMonster00" parametersList="monsters/monster23.png;RgnMonster23;4;4;MenuPuzzles03"/>
+    <instantiatescene name="PuzzleMonster24" 	masterscene="PuzzleMonster00" parametersList="monsters/monster24.png;RgnMonster24;4;4;MenuPuzzles03"/>
+    
+    <instantiatescene name="PuzzleMonster25" 	masterscene="PuzzleMonster00" parametersList="monsters/monster25.png;RgnMonster25;4;4;MenuPuzzles03"/>
+    <instantiatescene name="PuzzleMonster26" 	masterscene="PuzzleMonster00" parametersList="monsters/monster26.png;RgnMonster26;4;4;MenuPuzzles03"/>
+    <instantiatescene name="PuzzleMonster27" 	masterscene="PuzzleMonster00" parametersList="monsters/monster27.png;RgnMonster27;4;4;MenuPuzzles03"/>
+    <instantiatescene name="PuzzleMonster28" 	masterscene="PuzzleMonster00" parametersList="monsters/monster28.png;RgnMonster28;4;4;MenuPuzzles03"/>
+</scenes>
