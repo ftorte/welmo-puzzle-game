@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns="http://www.example.org/resources">
+    <textures name="spritesheets">
+        <texture name="spritesheet_01" height="2048" width="2048" autopacking="true">
+            <textureregion name="monster"		filename="sprites/monster.png"  		type="PNG"></textureregion>
+            <textureregion name="planetground"	filename="sprites/planetground.png"  	type="PNG"></textureregion>
+            <textureregion name="starship"		filename="sprites/starship.png"  	    type="PNG"></textureregion>
+			<textureregion name="sky"			filename="sprites/sky.png"  			type="PNG"></textureregion>
+            <textureregion name="planet"		filename="sprites/planet.png"  			type="PNG"></textureregion>
+            <textureregion name="LiteTxtRegion" filename="sprites/Lite.png" 			type="PNG"></textureregion>
+            <textureregion name="BthOval" 		filename="buttons/Oval_btn.png" 		type="PNG"></textureregion>
+        </texture>
+    </textures> 
+    <musics>
+       <music name="Startup" filename="Arcade.mid"></music>
+    </musics>    
+</resources>

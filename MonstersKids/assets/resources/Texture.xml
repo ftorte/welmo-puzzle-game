@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns="http://www.example.org/resources">
+    <textures name="buttons">
+        <texture name="ButtonSheet" height="1024" width="1024" autopacking="true">
+            <textureregion name="back_btn"			filename="buttons/Back_btn.png"  		type="PNG"></textureregion>
+            <textureregion name="back2level_btn" 	filename="buttons/Back2_btn.png"  		type="PNG"></textureregion>
+            <textureregion name="forward_btn"		filename="buttons/Forward_btn.png"  	type="PNG"></textureregion>
+            <textureregion name="config_btn"		filename="buttons/Config_btn.png"  		type="PNG"></textureregion>
+            <textureregion name="yellow_btn"		filename="buttons/Yellow_btn.png"  		type="PNG"></textureregion>
+            <textureregion name="star_lvl"			filename="buttons/level_star.png"  		type="PNG"></textureregion>
+            <textureregion name="star_disabled_lvl"	filename="buttons/level_transparent_star.png" type="PNG"></textureregion>
+             <textureregion name="star_lvl_2"			filename="buttons/level_star_2.png"  		type="PNG"></textureregion>
+            <textureregion name="star_disabled_lvl_2"	filename="buttons/level_transparent_star_2.png" type="PNG"></textureregion>
+             <textureregion name="star_lvl_3"			filename="buttons/level_star_3.png"  		type="PNG"></textureregion>
+            <textureregion name="star_disabled_lvl_3"	filename="buttons/level_transparent_star_3.png" type="PNG"></textureregion>
+            <textureregion name="lvl_button_inactive" filename="buttons/level_button_lite.png" type="PNG"></textureregion>
+            <textureregion name="lvl_button_bg"		filename="buttons/level_button_bg.png" 	type="PNG"></textureregion>
+            <textureregion name="lvl_button_locked"	filename="buttons/level_button.png" 	type="PNG"></textureregion>
+        </texture>
+        <texture name="Monsters" height="2048" width="2048" autopacking="true">
+            <textureregion name="RgnMonster01" filename="monsters/monster01.png" type="PNG"/>
+            <textureregion name="RgnMonster02" filename="monsters/monster02.png" type="PNG"/>
+            <textureregion name="RgnMonster03" filename="monsters/monster03.png" type="PNG"/>
+            <textureregion name="RgnMonster04" filename="monsters/monster04.png" type="PNG"/>
+            <textureregion name="RgnMonster05" filename="monsters/monster05.png" type="PNG"/>
+            <textureregion name="RgnMonster06" filename="monsters/monster06.png" type="PNG"/>
+            <textureregion name="RgnMonster07" filename="monsters/monster07.png" type="PNG"/>
+            <textureregion name="RgnMonster08" filename="monsters/monster08.png" type="PNG"/>
+            <textureregion name="RgnMonster09" filename="monsters/monster09.png" type="PNG"/>
+            <textureregion name="RgnMonster10" filename="monsters/monster10.png" type="PNG"/>
+            <textureregion name="RgnMonster11" filename="monsters/monster11.png" type="PNG"/>
+            <textureregion name="RgnMonster12" filename="monsters/monster12.png" type="PNG"/>
+            <textureregion name="RgnMonster13" filename="monsters/monster13.png" type="PNG"/>
+            <textureregion name="RgnMonster14" filename="monsters/monster14.png" type="PNG"/>
+            <textureregion name="RgnMonster15" filename="monsters/monster15.png" type="PNG"/>
+            <textureregion name="RgnMonster16" filename="monsters/monster16.png" type="PNG"/>
+            <textureregion name="RgnMonster17" filename="monsters/monster17.png" type="PNG"/>
+            <textureregion name="RgnMonster18" filename="monsters/monster18.png" type="PNG"/>
+            <textureregion name="RgnMonster19" filename="monsters/monster19.png" type="PNG"/>
+            <textureregion name="RgnMonster20" filename="monsters/monster20.png" type="PNG"/>
+            <textureregion name="RgnMonster21" filename="monsters/monster21.png" type="PNG"/>
+            <textureregion name="RgnMonster22" filename="monsters/monster22.png" type="PNG"/>
+            <textureregion name="RgnMonster23" filename="monsters/monster23.png" type="PNG"/>
+            <textureregion name="RgnMonster24" filename="monsters/monster24.png" type="PNG"/>
+            <textureregion name="RgnMonster25" filename="monsters/monster25.png" type="PNG"/>
+            <textureregion name="RgnMonster26" filename="monsters/monster26.png" type="PNG"/>
+            <textureregion name="RgnMonster27" filename="monsters/monster27.png" type="PNG"/>
+            <textureregion name="RgnMonster28" filename="monsters/monster28.png" type="PNG"/>
+        </texture>
+        <buildable_texture name="MonsterTiled" height="2048" width="2048">
+            <tiled_texture_region name="RgnTLDMonter01" filename="monsters/monster01.png" nbOfColumns="4" nbOfRows="4"/>
+            <tiled_texture_region name="RgnTLDMonter02" filename="monsters/monster02.png" nbOfColumns="4" nbOfRows="4"/>
+            <tiled_texture_region name="RgnTLDMonter03" filename="monsters/monster03.png" nbOfColumns="4" nbOfRows="4"/>
+            <tiled_texture_region name="RgnTLDMonter04" filename="monsters/monster04.png" nbOfColumns="4" nbOfRows="4"/>
+            <tiled_texture_region name="RgnTLDMonter05" filename="monsters/monster05.png" nbOfColumns="4" nbOfRows="4"/>
+            <tiled_texture_region name="RgnTLDMonter06" filename="monsters/monster06.png" nbOfColumns="4" nbOfRows="4"/>
+            <tiled_texture_region name="RgnTLDMonter07" filename="monsters/monster07.png" nbOfColumns="4" nbOfRows="4"/>
+            <tiled_texture_region name="RgnTLDMonter08" filename="monsters/monster08.png" nbOfColumns="4" nbOfRows="4"/>
+            <tiled_texture_region name="RgnTLDMonter09" filename="monsters/monster09.png" nbOfColumns="4" nbOfRows="4"/>
+            <tiled_texture_region name="RgnTLDMonter10" filename="monsters/monster10.png" nbOfColumns="4" nbOfRows="4"/>
+            <tiled_texture_region name="RgnTLDMonter11" filename="monsters/monster11.png" nbOfColumns="4" nbOfRows="4"/>
+            <tiled_texture_region name="RgnTLDMonter12" filename="monsters/monster12.png" nbOfColumns="4" nbOfRows="4"/>
+            <tiled_texture_region name="RgnTLDMonter13" filename="monsters/monster13.png" nbOfColumns="4" nbOfRows="4"/>
+            <tiled_texture_region name="RgnTLDMonter14" filename="monsters/monster14.png" nbOfColumns="4" nbOfRows="4"/>
+            <tiled_texture_region name="RgnTLDMonter15" filename="monsters/monster15.png" nbOfColumns="4" nbOfRows="4"/>
+            <tiled_texture_region name="RgnTLDMonter16" filename="monsters/monster16.png" nbOfColumns="4" nbOfRows="4"/>
+            <tiled_texture_region name="RgnTLDMonter17" filename="monsters/monster17.png" nbOfColumns="4" nbOfRows="4"/>
+            <tiled_texture_region name="RgnTLDMonter18" filename="monsters/monster18.png" nbOfColumns="4" nbOfRows="4"/>
+            <tiled_texture_region name="RgnTLDMonter19" filename="monsters/monster19.png" nbOfColumns="4" nbOfRows="4"/>
+            <tiled_texture_region name="RgnTLDMonter20" filename="monsters/monster20.png" nbOfColumns="4" nbOfRows="4"/>
+            <tiled_texture_region name="RgnTLDMonter21" filename="monsters/monster21.png" nbOfColumns="4" nbOfRows="4"/>
+            <tiled_texture_region name="RgnTLDMonter22" filename="monsters/monster22.png" nbOfColumns="4" nbOfRows="4"/>
+            <tiled_texture_region name="RgnTLDMonter23" filename="monsters/monster23.png" nbOfColumns="4" nbOfRows="4"/>
+            <tiled_texture_region name="RgnTLDMonter24" filename="monsters/monster24.png" nbOfColumns="4" nbOfRows="4"/>
+            <tiled_texture_region name="RgnTLDMonter25" filename="monsters/monster25.png" nbOfColumns="4" nbOfRows="4"/>
+            <tiled_texture_region name="RgnTLDMonter26" filename="monsters/monster26.png" nbOfColumns="4" nbOfRows="4"/>
+            <tiled_texture_region name="RgnTLDMonter27" filename="monsters/monster27.png" nbOfColumns="4" nbOfRows="4"/>
+            <tiled_texture_region name="RgnTLDMonter28" filename="monsters/monster28.png" nbOfColumns="4" nbOfRows="4"/>
+        </buildable_texture>
+        <texture name="DynamicTextures" height="512" width="512" autopacking="true">
+        	<dynamic_tiled_texture_region name="RgnDynamicTLDMonster01" dflt_filename="monsters/monster01.png" 
+        		dflt_nbOfColumns="4" dflt_nbOfRows="4"/>
+        </texture>
+    </textures> 
+</resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--comment-->
+<problem_closed>
+	<problem ID="1" dsc="Test"/>
+</problem_closed>
+
+<opened-problem>
+	<scene ID="Puzzle Scene">
+		<problem_open dsc="Add button to setup music on/off"/>
+		<problem_open dsc="Nb of pieces should be in function of the level (easy 3x3, medium 4x4, hard 5x5)"/>
+		<problem_open dsc="Add button to go back to menu list"/>
+		<problem_open dsc="Puzzles elementx have background not white and color are shaded 'come lavati'"/>
+		<problem_open dsc="Puzzles scene we should have a ground where monster are on"/>
+	</scene>
+
+	<scene ID="AllScenes">
+		<problem_open dsc="when close application with button back, relaunch application doesen't work"/>
+	</scene>
+
+	<scene ID="MainWindows">
+		<open ID="list">
+			<problem dsc="Need button start in main windows to launch menu selections"/>
+			<problem dsc="Add button to setup music on-off"/>
+			<problem dsc="Need buttons to share the game as for other games in google play (mail, facebook, rate-it, buy-full)"/>
+			<problem dsc="Makes ufo landing on the bakkground"/>
+			<problem dsc="Makes ufo coming with cover that open when landed and show the monster"/>
+			<problem dsc="Makes satellited smaller and moving from left to right slowly"/>
+			<problem dsc="Makes satellited eyes in the satellite blinking times to times"/>
+			<problem dsc="change lide with a band and a text with rounded font more big or carton stile"/>
+		</open>
+		<problem dsc="Add background"/>
+	</scene>
+
+	<scene ID="menu puzzl">
+		<problem_open dsc="Add button to setup music on/off"/>
+	</scene>
+
+	<scene ID="Configure">
+		<problem_open dsc="to create scene to configure the following parameters"
+			parameter = "music_on_of"
+			parameter = "difficulty=easy,medium,hard"
+			parameter = "langauge French-Italian-English"
+			
+		
+		/>
+	</scene>
+</opened-problem>
+
