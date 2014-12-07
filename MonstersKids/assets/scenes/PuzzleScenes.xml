@@ -23,8 +23,8 @@
          </event_handler>
       </sprite> 
       <!--  Options buttons -->    
-      <button ID="2000" type="CLICK" int_dim ="100" ext_dim="120" pz="10" px="1140" py="660" action="" texture_BG="back2level_btn" texture_ON="back2level_btn" 	texture_OFF="back2level_btn" 
-        		    on_click_message="RESET_SCROLL_ZOOM"/>
+      <button ID="2000" type="ON_OFF" int_dim ="100" ext_dim="120" pz="10" px="1140" py="660" action="" texture_ON="btnMusicON" 	texture_OFF="btnMusicOFF" 
+        		    on_click_message="SET_MUSIC_ONOFF"/>
       	
       <sprite ID="105" width="1280" height="237" pz="10" px="0" py="673" orientation="0" resourceName="planetground" type="STATIC"></sprite> 
     </scene>

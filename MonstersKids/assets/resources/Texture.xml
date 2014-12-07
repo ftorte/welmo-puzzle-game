@@ -2,20 +2,22 @@
 <resources xmlns="http://www.example.org/resources">
     <textures name="buttons">
         <texture name="ButtonSheet" height="1024" width="1024" autopacking="true">
-            <textureregion name="back_btn"			filename="buttons/Back_btn.png"  		type="PNG"></textureregion>
-            <textureregion name="back2level_btn" 	filename="buttons/Back2_btn.png"  		type="PNG"></textureregion>
-            <textureregion name="forward_btn"		filename="buttons/Forward_btn.png"  	type="PNG"></textureregion>
-            <textureregion name="config_btn"		filename="buttons/Config_btn.png"  		type="PNG"></textureregion>
-            <textureregion name="yellow_btn"		filename="buttons/Yellow_btn.png"  		type="PNG"></textureregion>
-            <textureregion name="star_lvl"			filename="buttons/level_star.png"  		type="PNG"></textureregion>
-            <textureregion name="star_disabled_lvl"	filename="buttons/level_transparent_star.png" type="PNG"></textureregion>
-             <textureregion name="star_lvl_2"			filename="buttons/level_star_2.png"  		type="PNG"></textureregion>
-            <textureregion name="star_disabled_lvl_2"	filename="buttons/level_transparent_star_2.png" type="PNG"></textureregion>
-             <textureregion name="star_lvl_3"			filename="buttons/level_star_3.png"  		type="PNG"></textureregion>
-            <textureregion name="star_disabled_lvl_3"	filename="buttons/level_transparent_star_3.png" type="PNG"></textureregion>
-            <textureregion name="lvl_button_inactive" filename="buttons/level_button_lite.png" type="PNG"></textureregion>
-            <textureregion name="lvl_button_bg"		filename="buttons/level_button_bg.png" 	type="PNG"></textureregion>
-            <textureregion name="lvl_button_locked"	filename="buttons/level_button.png" 	type="PNG"></textureregion>
+            <textureregion name="back_btn"				filename="buttons/Back_btn.png"  					type="PNG"></textureregion>
+            <textureregion name="back2level_btn" 		filename="buttons/Back2_btn.png"  					type="PNG"></textureregion>
+            <textureregion name="forward_btn"			filename="buttons/Forward_btn.png"  				type="PNG"></textureregion>
+            <textureregion name="config_btn"			filename="buttons/Config_btn.png"  					type="PNG"></textureregion>
+            <textureregion name="yellow_btn"			filename="buttons/Yellow_btn.png"  					type="PNG"></textureregion>
+            <textureregion name="star_lvl"				filename="buttons/level_star.png"  					type="PNG"></textureregion>
+            <textureregion name="star_disabled_lvl"		filename="buttons/level_transparent_star.png" 		type="PNG"></textureregion>
+             <textureregion name="star_lvl_2"			filename="buttons/level_star_2.png"  				type="PNG"></textureregion>
+            <textureregion name="star_disabled_lvl_2"	filename="buttons/level_transparent_star_2.png" 	type="PNG"></textureregion>
+             <textureregion name="star_lvl_3"			filename="buttons/level_star_3.png"  				type="PNG"></textureregion>
+            <textureregion name="star_disabled_lvl_3"	filename="buttons/level_transparent_star_3.png" 	type="PNG"></textureregion>
+            <textureregion name="lvl_button_inactive" 	filename="buttons/level_button_lite.png" 			type="PNG"></textureregion>
+            <textureregion name="lvl_button_bg"			filename="buttons/level_button_bg.png" 				type="PNG"></textureregion>
+            <textureregion name="lvl_button_locked"		filename="buttons/level_button.png" 				type="PNG"></textureregion>
+            <textureregion name="btnMusicOFF"			filename="buttons/musicOFF.png" 					type="PNG"></textureregion>
+            <textureregion name="btnMusicON"			filename="buttons/musicON.png" 						type="PNG"></textureregion>
         </texture>
         <texture name="Monsters" height="2048" width="2048" autopacking="true">
             <textureregion name="RgnMonster01" filename="monsters/monster01.png" type="PNG"/>
