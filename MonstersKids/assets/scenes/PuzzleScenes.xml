@@ -22,11 +22,26 @@
            <post_mod_action ID="4" type="CHANGE_TO_FATHER_SCENE"/>
          </event_handler>
       </sprite> 
-      <!--  Options buttons -->    
-      <button ID="2000" type="ON_OFF" int_dim ="100" ext_dim="120" pz="10" px="1140" py="660" action="" texture_ON="btnMusicON" 	texture_OFF="btnMusicOFF" 
+      
+      
+      <!--  Configure button -->  
+      <sprite ID="2000" height="120" width="120" pz="10" px="1140" py="20" resourceName="config_btn" type="CLICKABLE">
+         <event_handler ID ="1000" event="ON_CLICK">
+           <modifier_list execution_order="SERIAL" UniqueName="ZoomInOut">
+      	     <modifier ID="2" typeSet="false" type="SCALE" duration="0.3" scale_begin="1" scale_end="1.2"/> 
+      		 <modifier ID="2" typeSet="false" type="SCALE" duration="0.3" scale_begin="1.2" scale_end="1"/> 
+      	   </modifier_list>
+      	   <pre_mod_action ID="1" type="CHANGE_Z_ORDER" pz="100"/>
+      	   <post_mod_action ID="1" type="CHANGE_Z_ORDER" pz="1"/>
+           <post_mod_action ID="4" type="CHANGE_TO_FATHER_SCENE"/>
+         </event_handler>
+      </sprite> 
+      
+      <!--  Music OnOff button -->   
+      <button ID="3000" persistent= "true" persistent_value="MusicON" type="ON_OFF" int_dim ="100" ext_dim="120" pz="10" px="1140" py="660" action="" texture_ON="btnMusicON" 	texture_OFF="btnMusicOFF" 
         		    on_click_message="SET_MUSIC_ONOFF"/>
       	
-      <sprite ID="105" width="1280" height="237" pz="10" px="0" py="673" orientation="0" resourceName="planetground" type="STATIC"></sprite> 
+      <sprite ID="4000" width="1280" height="237" pz="10" px="0" py="673" orientation="0" resourceName="planetground" type="STATIC"></sprite> 
     </scene>
     
     
