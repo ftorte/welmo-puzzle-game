@@ -61,12 +61,14 @@ public class MonstersKids extends SimpleWelmoActivity {
 	private SharedPreferenceManager 	pSPM=null;
 	
 	private final String[] resourceFiles = {
-			"resources/Texture.xml"
+			"resources/Texture.xml",
+			"resources/musics_and_sounds.xml"
 	};
 	//list of scene file to load
 	private final String[] sceneFiles = {
 			"scenes/MenuPuzzles.xml",
-			"scenes/PuzzleScenes.xml"
+			"scenes/PuzzleScenes.xml",
+			"scenes/ConfigureScene.xml"
 	};
 
 	public MonstersKids() {
@@ -74,10 +76,11 @@ public class MonstersKids extends SimpleWelmoActivity {
 		//setup the resource for the starting scenes
 		setStartResourceDscFiles("resources/StartUp.xml");
 		setStartSceneDscFile("scenes/StartUp.xml");
-		//setup the first scene name
+		
+		//setup the starting scene name
 		setFirstSceneName("OpenScene",3000);	
+		
 		//setup the first scene name
-		//setMainSceneName("MainMenu");
 		setMainSceneName("MenuPuzzles01");
 		
 		//setup the scene dimensions
@@ -114,7 +117,6 @@ public class MonstersKids extends SimpleWelmoActivity {
 	}
 	@Override
 	public void doOperation(Operation msg) {
-		super.doOperation(msg);
 		switch(msg.type){
 			case ACTIVATE_BTN_NEXT_SCENE_LAUNCER:
 				Log.i(TAG,"SET_LAUNCH_BUTTON_STATUS");
@@ -129,5 +131,6 @@ public class MonstersKids extends SimpleWelmoActivity {
 			default:
 				break;
 		}
+		super.doOperation(msg);
 	}
 }
