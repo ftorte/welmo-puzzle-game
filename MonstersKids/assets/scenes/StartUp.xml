@@ -4,7 +4,7 @@
   	<background ID="100" type="SPRITE" >
     	<sprite ID="101" width="1280" height="800" px="0" py="0" resourceName="sky" type="STATIC"></sprite>
     </background>
-    <sprite ID="102" width="300" height="291" px="900" py="50" orientation="0" resourceName="planet" type="STATIC"></sprite>
+    <sprite ID="102" width="300" height="291" px="900" py="50" pz="0" orientation="0"  resourceName="planet" type="STATIC"></sprite>
     <sprite ID="103" width="300" height="229" px="100" py="150" orientation="0" resourceName="starship" type="CLICKABLE">
     	<sprite ID="201" width="173" height="143"   px="60" py="-54" orientation="0" resourceName="monster" type="STATIC"></sprite>
     	<event_handler ID ="301" event="ON_CLICK">
@@ -17,5 +17,14 @@
     </sprite>
    	<sprite ID="104" width="1280" height="237" px="0" py="673" orientation="0" resourceName="planetground" type="STATIC"></sprite>
     <sprite ID="106" width="198" height="117" px="1054" py="641" orientation="-30" resourceName="LiteTxtRegion" type="STATIC"></sprite>
+    <button ID="3000" persistent= "false" type="ON_OFF" int_dim ="100" ext_dim="120" pz="10" px="1112" py="320" action="" texture_ON="monster" 	texture_OFF="monster" on_click_message="RESET_PERSITENCE"/>
   </scene>
+  
+  <scene name="OpenScene2">
+  	<background ID="100" type="SPRITE" >
+    	<sprite ID="101" width="1280" height="800" px="0" py="0" resourceName="sky" type="STATIC"></sprite>
+    </background>
+       	<sprite ID="201" width="173" height="143"   px="60" py="-54" pz="10" orientation="0" resourceName="monster" type="STATIC"></sprite>       	
+  </scene>
+  
 </scenes>
