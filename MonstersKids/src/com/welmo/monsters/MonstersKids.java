@@ -78,7 +78,7 @@ public class MonstersKids extends SimpleWelmoActivity {
 		setStartSceneDscFile("scenes/StartUp.xml");
 		
 		//setup the starting scene name
-		setFirstSceneName("OpenScene",3000);	
+		setFirstSceneName("OpenScene",10000);	
 		
 		//setup the first scene name
 		setMainSceneName("MenuPuzzles01");
