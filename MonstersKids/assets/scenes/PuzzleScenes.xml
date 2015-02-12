@@ -33,7 +33,7 @@
       	   </modifier_list>
       	   <pre_mod_action ID="1" type="CHANGE_Z_ORDER" pz="100"/>
       	   <post_mod_action ID="1" type="CHANGE_Z_ORDER" pz="1"/>
-           <post_mod_action ID="4" type="CHANGE_TO_FATHER_SCENE"/>
+           <post_mod_action ID="4" type="CHANGE_TO_CHILD_SCENE" next_scene="Configure"/>
          </event_handler>
       </sprite> 
       
