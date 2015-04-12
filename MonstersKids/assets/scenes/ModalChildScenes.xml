@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scenes xmlns="http://www.example.org/scene">
+    <scene name="BuyFullVersion" class_name="com.welmo.andengine.scenes.ManageableCameraScene">
+	</scene>
+	
+  		
+	<scene name="ScoreScreen" class_name="com.welmo.andengine.scenes.ScoreScene">
+		<event_handler ID ="1000" event="ON_CLICK">
+	   		<modifier_list execution_order="SERIAL" UniqueName="ZoomInOut">
+	     		<modifier ID="2" typeSet="false" type="SCALE" duration="0.3" scale_begin="1" scale_end="1.2"/> 
+	     		<modifier ID="2" typeSet="false" type="SCALE" duration="0.3" scale_begin="1.2" scale_end="1"/> 
+	     	</modifier_list>
+	     	<pre_mod_action ID="1" type="CHANGE_Z_ORDER" pz="100"/>
+	     	<post_mod_action ID="1" type="CHANGE_Z_ORDER" pz="1"/>
+	     	<post_mod_action ID="4" type="CLOSE_CHILD" 	/>
+			<post_mod_action ID="5" type="CHANGE_SCENE" next_scene="PuzzleMonster01"/>
+	 	</event_handler>
+	 	
+	 	<event_handler ID ="1001" event="ON_SCENE_LAUNCH">
+	   		<modifier_list execution_order="SERIAL" UniqueName="ZoomInOut">
+	     		<modifier ID="2" typeSet="false" type="SCALE" duration="3" scale_begin="0.1" scale_end="1"/> 
+	     	</modifier_list>
+	     	<pre_mod_action ID="1" type="CHANGE_Z_ORDER" pz="100"/>
+	     	<post_mod_action ID="1" type="CHANGE_Z_ORDER" pz="1"/>
+	 	</event_handler>
+	 	
+	    <sprite ID="100" width="590" height="705" pz="0" px="345" py="48" type="NULL_SPRITE">
+	    	<sprite ID="101" px="69" 	py="30" 	width="451" 	height="90" 	pz="0" 	resourceName="titlebar" 		type="STATIC">
+	    	    <text   ID="114" message="score_scene_title"   px="0" py="0" pz="100" resourceName="Graystroke_Regular" type="RESOURCE" h_alignment="CENTER" v_alignment="CENTER"></text>
+	    	</sprite>
+			<sprite ID="102" px="0" 	py="74" 	width="590" 	height="597" 	pz="0" 	resourceName="window" 			type="STATIC"></sprite>
+			<sprite ID="103" px="162" 	py="583" 	width="122" 	height="122" 	pz="10" resourceName="buttonretray" 	type="CLICKABLE">
+			    <event_handler cloneID ="1000" event="ON_CLICK" >
+			        <post_mod_action ID="4" type="CLOSE_CHILD" 	/>
+					<post_mod_action ID="5" type="RELOAD_SCENE" />
+			    </event_handler>
+			</sprite>
+			<sprite ID="104" px="299" 	py="583" 	width="122" 	height="122" 	pz="10" resourceName="buttonmenu" 		type="CLICKABLE">
+			    <event_handler cloneID ="1000" event="ON_CLICK" >
+			        <post_mod_action ID="4" type="CLOSE_CHILD" 	/>
+					<post_mod_action ID="5" type="GO_TO_MENU"/>
+				</event_handler>
+			</sprite>
+			<sprite ID="105" px="437" 	py="583" 	width="122" 	height="122" 	pz="10" resourceName="buttonnext" 		type="CLICKABLE">
+			   <event_handler cloneID ="1000" event="ON_CLICK" >
+			        <post_mod_action ID="4" type="CLOSE_CHILD" 	/>
+					<post_mod_action ID="5" type="GO_TO_NEXTLEVEL"/>
+				</event_handler>
+			</sprite>
+			<sprite ID="106" px="266" 	py="346" 	width="283" 	height="77" 	pz="0" resourceName="zonetext" 		type="STATIC"></sprite>
+			<sprite ID="107" px="296" 	py="356" 	width="283" 	height="77"   	pz="10" type="NULL_SPRITE">
+				<text   ID="117" message="00:00:00" px="0" py="0" pz="10" scale="1" color="Forest_Green" resourceName="Graystroke_Regular" type="SIMPLE" h_alignment="CENTER" v_alignment="CENTER"></text>
+	    	</sprite>
+			<sprite ID="108" px="266" 	py="451" 	width="283" 	height="77" 	pz="0" resourceName="zonetext" 		type="STATIC"></sprite>
+			<sprite ID="109" px="306" 	py="461" 	width="283" 	height="77"    	pz="10" type="NULL_SPRITE">
+				<text   ID="119" message="00000000" px="0" py="0" pz="10" scale="1" color="Forest_Green" resourceName="Graystroke_Regular" type="SIMPLE" h_alignment="CENTER" v_alignment="CENTER"></text>
+			</sprite>
+			<sprite ID="110" px="216" 	py="313" 	width="101" 	height="119" 	pz="20" resourceName="clock" 			type="STATIC"></sprite>
+			<sprite ID="111" px="215" 	py="438" 	width="108" 	height="101" 	pz="20" resourceName="star" 			type="STATIC"/>
+			
+			<sprite ID="120" px="20" 	py="160" 	width="161" 	height="151" 	pz="0" orientation="-15" resourceName="star_disabled" 	type="CLICKABLE"/>
+			<sprite ID="112" px="20" 	py="160" 	width="161" 	height="151" 	pz="10" orientation="-15" resourceName="star" 	type="CLICKABLE">
+				<event_handler cloneID ="1001" event="ON_SCENE_LAUNCH"/>
+			</sprite>
+			<sprite ID="121" px="201" 	py="126" 	width="186" 	height="173" 	pz="0" resourceName="star_disabled" 			type="CLICKABLE"/>
+			<sprite ID="113" px="201" 	py="126" 	width="186" 	height="173" 	pz="10" resourceName="star" 			type="CLICKABLE">
+				<event_handler cloneID ="1001" event="ON_SCENE_LAUNCH"/>
+			</sprite>
+			<sprite ID="122" px="410" 	py="130" 	width="161" 	height="151" 	pz="0" orientation="+15" resourceName="star_disabled" 	type="CLICKABLE"/>
+			<sprite ID="114" px="410" 	py="130" 	width="161" 	height="151" 	pz="10" orientation="+15" resourceName="star" 	type="CLICKABLE">
+			    	<event_handler cloneID ="1001" event="ON_SCENE_LAUNCH"/>
+			</sprite>
+			<sprite ID="115" width="160" height="50" pz="0" px="46" py="369" type="NULL_SPRITE">
+	    	    <text   ID="201" message="score_scene_time"   px="0" py="0" pz="100" scale="1.2" color="Forest_Green" resourceName="Graystroke_Regular" type="RESOURCE" h_alignment="LEFTH" v_alignment="CENTER"></text>
+	    	</sprite>
+			<sprite ID="116" width="160" height="50" pz="0" px="46" py="484" type="NULL_SPRITE">
+			    <text  ID="202" message="score_scene_points"   px="0" py="0" pz="100" scale="1.2" color="Forest_Green" resourceName="Graystroke_Regular" type="RESOURCE" h_alignment="LEFTH" v_alignment="CENTER"></text>
+	    	</sprite>
+		</sprite>
+	</scene>
+	
+	<scene name="InAppPurchasing"  class_name="com.welmo.andengine.scenes.InAppPurchasing">    
+		<sprite ID="100" 		px="345" 	py="48" 	width="790" 	height="625" 	pz="0" 									type="NULL_SPRITE">
+ 	    	<sprite ID="102" 	px="0" 		py="61" 	width="729" 	height="564" 	pz="0" resourceName="window" 			type="STATIC"/>
+			<sprite ID="103" 	px="668" 	py="0" 		width="122" 	height="122" 	pz="10" resourceName="buttoncancel" 	type="CLICKABLE">
+				<event_handler ID ="1000" event="ON_CLICK" >
+			    	<modifier_list execution_order="SERIAL" UniqueName="ZoomInOut">
+	     				<modifier ID="2" typeSet="false" type="SCALE" duration="0.3" scale_begin="1" scale_end="1.2"/> 
+	     				<modifier ID="2" typeSet="false" type="SCALE" duration="0.3" scale_begin="1.2" scale_end="1"/> 
+	     			</modifier_list>
+	     	    	<post_mod_action ID="4" type="CLOSE_CHILD" 	/>
+				</event_handler>
+			</sprite>
+			<sprite ID="104" 	px="85" 	py="114" 	width="601" 	height="281"    pz="10" type="NULL_SPRITE">
+				<text   ID="114" px="0" py="0" pz="10" scale="1" 
+					    message="in_app_purchasing_message" color="Forest_Green" resourceName="Graystroke_Regular" type="RESOURCE"
+					   	h_alignment="CENTER" v_alignment="CENTER">
+				</text>
+			</sprite>
+			<sprite ID="105" 	px="220" 	py="424" 	width="326" 	height="111" 	pz="10"  resourceName="buttonbuy2" 	type="CLICKABLE">
+				<sprite ID="115" px="59" 	py="24" 	width="143" 	height="50"    pz="0" 	type="NULL_SPRITE">
+					<text   ID="114" message="TEST TEST TEST" 
+					    	px="0" py="0" pz="10" scale="1" color="Forest_Green" resourceName="Graystroke_Regular" type="SIMPLE" 
+					   	 	h_alignment="CENTER" v_alignment="CENTER">
+					</text>
+				</sprite>
+				<event_handler ID ="1001" event="ON_CLICK" >
+			    	<modifier_list execution_order="SERIAL" UniqueName="ZoomInOut">
+	     				<modifier ID="2" typeSet="false" type="SCALE" duration="0.3" scale_begin="1" scale_end="1.2"/> 
+	     				<modifier ID="2" typeSet="false" type="SCALE" duration="0.3" scale_begin="1.2" scale_end="1"/> 
+	     			</modifier_list>
+	     	    	<post_mod_action ID="4" type="CLOSE_CHILD" 	/>
+				</event_handler>
+			</sprite>
+		</sprite>
+	</scene>
+	
+	<scene name="Configure" class_name="com.welmo.andengine.scenes.ManageableCameraScene">
+        <button ID="01" type="ON_OFF" persistent= "true" persistent_value="MusicON" int_dim ="100" ext_dim="120" pz="10" px="1220" py="340" action="" texture_ON="btnMusicON" texture_OFF="btnMusicOFF" on_click_message="SET_MUSIC_ONOFF"/>
+		<scene_launcher_btn ID="200" height="200" width="200" pz="10" px="195" py="170"
+		    back_ground_inactive="yellow_btn;0;0;200;200"
+			back_ground_final="yellow_btn;0;0;200;200"
+			ico_locked="lvl_button_locked;25;25;120;120"
+			ico_free="RgnMonster01;30;20;140;140"
+			ico_star_1="star_lvl_2;20;120;40;40"
+			ico_star_2="star_lvl_2;80;150;40;40"
+			ico_star_3="star_lvl_2;140;120;40;40"
+			ico_star_inactive_1="star_disabled_lvl_2;20;120;40;40"
+			ico_star_inactive_2="star_disabled_lvl_2;80;150;40;40"
+			ico_star_inactive_3="star_disabled_lvl_2;140;120;40;40"
+			status_default="level0" next_scene="PuzzleMonster01">
+      	</scene_launcher_btn>
+	</scene>
+</scenes>

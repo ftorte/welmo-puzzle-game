@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <scenes xmlns="http://www.example.org/scene">
-    <scene name="PuzzleMonster00" sceneFather="MenuPuzzles01" class_name="com.welmo.andengine.scenes.PuzzleScene">  
+    <scene name="PuzzleMonster00" sceneFather="MenuPuzzles01" class_name="com.welmo.andengine.scenes.PuzzleScene" end_scene="ScoreScreen">  
       <background ID="100" type="SPRITE" >
           <sprite ID="101" width="1280" height="800" pz="0" px="0" py="0" resourceName="sky" type="STATIC"></sprite>
       </background>
@@ -45,7 +45,7 @@
     </scene>
     
     
-    <instantiatescene name="PuzzleMonster01" 	masterscene="PuzzleMonster00" parametersList="monsters/monster01.png;RgnMonster01;4;4;MenuPuzzles01,200"/>
+    <instantiatescene name="PuzzleMonster01" 	masterscene="PuzzleMonster00" parametersList="monsters/monster01.png;RgnMonster01;2;2;MenuPuzzles01,200"/>
     <instantiatescene name="PuzzleMonster02" 	masterscene="PuzzleMonster00" parametersList="monsters/monster02.png;RgnMonster02;4;4;MenuPuzzles01,300"/>
     <instantiatescene name="PuzzleMonster03" 	masterscene="PuzzleMonster00" parametersList="monsters/monster03.png;RgnMonster03;4;4;MenuPuzzles01,400"/>
     <instantiatescene name="PuzzleMonster04" 	masterscene="PuzzleMonster00" parametersList="monsters/monster04.png;RgnMonster04;4;4;MenuPuzzles01,500"/>

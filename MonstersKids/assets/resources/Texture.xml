@@ -79,6 +79,20 @@
             <tiled_texture_region name="RgnTLDMonter27" filename="monsters/monster27.png" nbOfColumns="4" nbOfRows="4"/>
             <tiled_texture_region name="RgnTLDMonter28" filename="monsters/monster28.png" nbOfColumns="4" nbOfRows="4"/>
         </buildable_texture>
+        <texture name="GUIElements" height="2048" width="2048" autopacking="true">
+            <textureregion name="buttonbuy" 	filename="guielements/buttonbuy.png" 		type="PNG"/>
+            <textureregion name="buttonmenu" 	filename="guielements/buttonmenu.png" 		type="PNG"/>
+            <textureregion name="buttonnext" 	filename="guielements/buttonnext.png" 		type="PNG"/>
+            <textureregion name="buttonretray" 	filename="guielements/buttonretray.png" 	type="PNG"/>
+            <textureregion name="clock" 		filename="guielements/clock.png" 			type="PNG"/>
+            <textureregion name="titlebar" 		filename="guielements/titlebar.png" 		type="PNG"/>
+            <textureregion name="star" 			filename="guielements/star.png" 			type="PNG"/>
+            <textureregion name="star_disabled" filename="guielements/star_disabled.png"	type="PNG"/>
+            <textureregion name="window"		filename="guielements/window.png" 			type="PNG"/>
+            <textureregion name="zonetext" 		filename="guielements/zonetext.png" 		type="PNG"/>
+            <textureregion name="buttonbuy2" 	filename="guielements/buttonbuy2.png" 		type="PNG"/>
+            <textureregion name="buttoncancel" 	filename="guielements/buttoncancel.png" 	type="PNG"/>
+        </texture>
         <texture name="DynamicTextures" height="512" width="512" autopacking="true">
         	<dynamic_tiled_texture_region name="RgnDynamicTLDMonster01" dflt_filename="monsters/monster01.png" 
         		dflt_nbOfColumns="4" dflt_nbOfRows="4"/>
