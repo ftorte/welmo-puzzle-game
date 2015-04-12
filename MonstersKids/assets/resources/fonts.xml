@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns="http://www.example.org/resources">
+	<fonts>
+        <font name="Kartoons" txtdimX="256" txtdimY="256" size="72" color="White" antialiasing="true" filename="kartoons.ttf"></font>
+        <font name="Graystroke_Regular" txtdimX="256" txtdimY="256" size="48" color="White" antialiasing="true" filename="GRAYSTROKE REGULAR.otf"></font>
+     </fonts>
+</resources>
