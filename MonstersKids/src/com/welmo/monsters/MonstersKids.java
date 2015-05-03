@@ -128,8 +128,10 @@ public class MonstersKids extends SimpleWelmoActivity {
 	private final String[] sceneFiles = {
 			"scenes/MenuPuzzles.xml",
 			"scenes/PuzzleScenes.xml",
-			"scenes/ConfigureScene.xml",
 			"scenes/ModalChildScenes.xml",
+	};
+	private final String[] particuleSuystemFiles = {
+			"resources/ParticuleSystems.xml"
 	};
 	
 	@Override
@@ -202,6 +204,8 @@ public class MonstersKids extends SimpleWelmoActivity {
 	protected void onLoadResourcesDescriptionsInBackGround() {
 		
 		this.readResourceDescriptions(resourceFiles);
+		this.readParticuleSystemDescriptions(particuleSuystemFiles);
+		
 		
 	}
 	@Override
@@ -216,9 +220,13 @@ public class MonstersKids extends SimpleWelmoActivity {
 				String nextScene = NEXT_SCENE_LAUNCHER.get(msg.getParameterString(0));
 				if(nextScene!= null && !(nextScene.contentEquals(""))){
 					SharedPreferences sp = pSPM.getSharedPreferences(nextScene);
-					Editor edt = sp.edit();
-					edt.putString("LaunchStatus", ButtonSceneLauncherDescriptor.Status.level0.name());
-					edt.commit();
+					//get current status of next scene button and if is Locked unlook it
+					ButtonSceneLauncherDescriptor.Status currentStatus = ButtonSceneLauncherDescriptor.Status.valueOf(sp.getString("LaunchStatus", ButtonSceneLauncherDescriptor.Status.Locked.name()));
+					if(currentStatus == ButtonSceneLauncherDescriptor.Status.Locked){
+						Editor edt = sp.edit();
+						edt.putString("LaunchStatus", ButtonSceneLauncherDescriptor.Status.Unlocked.name());
+						edt.commit();
+					}
 				}
 				break;
 			default:
