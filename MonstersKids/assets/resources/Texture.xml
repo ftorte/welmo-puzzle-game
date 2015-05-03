@@ -7,6 +7,7 @@
             <textureregion name="forward_btn"			filename="buttons/Forward_btn.png"  				type="PNG"></textureregion>
             <textureregion name="config_btn"			filename="buttons/Config_btn.png"  					type="PNG"></textureregion>
             <textureregion name="yellow_btn"			filename="buttons/Yellow_btn.png"  					type="PNG"></textureregion>
+            <textureregion name="green_btn"				filename="buttons/Green_btn.png"  					type="PNG"></textureregion>
             <textureregion name="star_lvl"				filename="buttons/level_star.png"  					type="PNG"></textureregion>
             <textureregion name="star_disabled_lvl"		filename="buttons/level_transparent_star.png" 		type="PNG"></textureregion>
              <textureregion name="star_lvl_2"			filename="buttons/level_star_2.png"  				type="PNG"></textureregion>
@@ -92,6 +93,15 @@
             <textureregion name="zonetext" 		filename="guielements/zonetext.png" 		type="PNG"/>
             <textureregion name="buttonbuy2" 	filename="guielements/buttonbuy2.png" 		type="PNG"/>
             <textureregion name="buttoncancel" 	filename="guielements/buttoncancel.png" 	type="PNG"/>
+            <textureregion name="disabled" 		filename="guielements/disabled.png" 		type="PNG"/>
+            <textureregion name="locked" 		filename="guielements/locked_brown.png" 	type="PNG"/>
+            <textureregion name="unlocked" 		filename="guielements/unlocked_brown.png" 	type="PNG"/>
+            <textureregion name="fireworks" 	filename="guielements/fireworks.png" 		type="PNG"/>
+            <textureregion name="difficulty" 	filename="guielements/ico_difficulty.png" 	type="PNG"/>
+            <textureregion name="sel_bar" 		filename="guielements/sel_bar.png" 			type="PNG"/>
+            <textureregion name="sel_btn_minus" filename="guielements/sel_btn_minus.png" 	type="PNG"/>
+            <textureregion name="sel_btn_plus"	filename="guielements/sel_btn_plus.png" 	type="PNG"/>
+            <textureregion name="sel_level" 	filename="guielements/sel_level.png" 		type="PNG"/>
         </texture>
         <texture name="DynamicTextures" height="512" width="512" autopacking="true">
         	<dynamic_tiled_texture_region name="RgnDynamicTLDMonster01" dflt_filename="monsters/monster01.png" 
