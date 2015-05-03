@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <scenes xmlns="http://www.example.org/scene">
-    <scene name="BuyFullVersion" class_name="com.welmo.andengine.scenes.ManageableCameraScene">
-	</scene>
-	
-  		
 	<scene name="ScoreScreen" class_name="com.welmo.andengine.scenes.ScoreScene">
 		<event_handler ID ="1000" event="ON_CLICK">
 	   		<modifier_list execution_order="SERIAL" UniqueName="ZoomInOut">
@@ -24,7 +20,8 @@
 	     	<post_mod_action ID="1" type="CHANGE_Z_ORDER" pz="1"/>
 	 	</event_handler>
 	 	
-	    <sprite ID="100" width="590" height="705" pz="0" px="345" py="48" type="NULL_SPRITE">
+	    <!-- <sprite ID="100" width="590" height="705" pz="0" px="345" py="48" type="NULL_SPRITE">  -->
+	    <sprite ID="100" width="651" height="705" pz="0" px="345" py="48" type="NULL_SPRITE">
 	    	<sprite ID="101" px="69" 	py="30" 	width="451" 	height="90" 	pz="0" 	resourceName="titlebar" 		type="STATIC">
 	    	    <text   ID="114" message="score_scene_title"   px="0" py="0" pz="100" resourceName="Graystroke_Regular" type="RESOURCE" h_alignment="CENTER" v_alignment="CENTER"></text>
 	    	</sprite>
@@ -76,6 +73,15 @@
 			<sprite ID="116" width="160" height="50" pz="0" px="46" py="484" type="NULL_SPRITE">
 			    <text  ID="202" message="score_scene_points"   px="0" py="0" pz="100" scale="1.2" color="Forest_Green" resourceName="Graystroke_Regular" type="RESOURCE" h_alignment="LEFTH" v_alignment="CENTER"></text>
 	    	</sprite>
+	    	<sprite ID="117" 	px="529" 	py="0" 		width="122" 	height="122" 	pz="10" resourceName="buttoncancel" 	type="CLICKABLE">
+				<event_handler ID ="1000" event="ON_CLICK" >
+			    	<modifier_list execution_order="SERIAL" UniqueName="ZoomInOut">
+	     				<modifier ID="2" typeSet="false" type="SCALE" duration="0.1" scale_begin="1" scale_end="1.2"/> 
+	     				<modifier ID="2" typeSet="false" type="SCALE" duration="0.1" scale_begin="1.2" scale_end="1"/> 
+	     			</modifier_list>
+	     	    	<post_mod_action ID="4" type="CLOSE_CHILD" 	/>
+				</event_handler>
+			</sprite>
 		</sprite>
 	</scene>
 	
@@ -110,25 +116,65 @@
 	     				<modifier ID="2" typeSet="false" type="SCALE" duration="0.3" scale_begin="1.2" scale_end="1"/> 
 	     			</modifier_list>
 	     	    	<post_mod_action ID="4" type="CLOSE_CHILD" 	/>
+	     	    	<post_mod_action ID="4" type="INAPP_PURCHASE" productID="monsters_4to24" 	/>
 				</event_handler>
 			</sprite>
 		</sprite>
 	</scene>
 	
-	<scene name="Configure" class_name="com.welmo.andengine.scenes.ManageableCameraScene">
-        <button ID="01" type="ON_OFF" persistent= "true" persistent_value="MusicON" int_dim ="100" ext_dim="120" pz="10" px="1220" py="340" action="" texture_ON="btnMusicON" texture_OFF="btnMusicOFF" on_click_message="SET_MUSIC_ONOFF"/>
-		<scene_launcher_btn ID="200" height="200" width="200" pz="10" px="195" py="170"
-		    back_ground_inactive="yellow_btn;0;0;200;200"
-			back_ground_final="yellow_btn;0;0;200;200"
-			ico_locked="lvl_button_locked;25;25;120;120"
-			ico_free="RgnMonster01;30;20;140;140"
-			ico_star_1="star_lvl_2;20;120;40;40"
-			ico_star_2="star_lvl_2;80;150;40;40"
-			ico_star_3="star_lvl_2;140;120;40;40"
-			ico_star_inactive_1="star_disabled_lvl_2;20;120;40;40"
-			ico_star_inactive_2="star_disabled_lvl_2;80;150;40;40"
-			ico_star_inactive_3="star_disabled_lvl_2;140;120;40;40"
-			status_default="level0" next_scene="PuzzleMonster01">
-      	</scene_launcher_btn>
+	<scene name="PuzzleLocked"  class_name="com.welmo.andengine.scenes.InAppPurchasing">    
+		<sprite ID="100" 		px="245" 	py="148" 	width="790" 	height="425" 	pz="0" 									type="NULL_SPRITE">
+ 	    	<sprite ID="102" 	px="0" 		py="61" 	width="729" 	height="364" 	pz="0" resourceName="window" 			type="STATIC">
+			    	<text   ID="114" px="0" py="0" pz="10" scale="1" 
+						    message="locked" color="Forest_Green" resourceName="Graystroke_Regular" type="RESOURCE" textmaxlenght="200" textmaxwidth="600"
+						   	h_alignment="CENTER" v_alignment="CENTER">
+					</text>
+			</sprite>
+			<sprite ID="103" 	px="668" 	py="0" 		width="122" 	height="122" 	pz="10" resourceName="buttoncancel" 	type="CLICKABLE">
+				<event_handler ID ="1000" event="ON_CLICK" >
+			    	<modifier_list execution_order="SERIAL" UniqueName="ZoomInOut">
+	     				<modifier ID="2" typeSet="false" type="SCALE" duration="0.3" scale_begin="1" scale_end="1.2"/> 
+	     				<modifier ID="2" typeSet="false" type="SCALE" duration="0.3" scale_begin="1.2" scale_end="1"/> 
+	     			</modifier_list>
+	     	    	<post_mod_action ID="4" type="CLOSE_CHILD" 	/>
+				</event_handler>
+			</sprite>
+		</sprite>
+	</scene>
+	
+	
+	<scene name="Configure" class_name="com.welmo.andengine.scenes.ManageableCameraScene">	
+	    <sprite ID="1000" 		px="240" 	py="39" 	width="861" 	height="661" 	pz="0" 									type="NULL_SPRITE">
+	        <sprite ID="1100" 	px="200" 	py="30" 	width="400" 	height="90" 	pz="10" 	resourceName="titlebar" 		type="STATIC">
+	    	    <text   ID="114" message="score_scene_title"   px="0" py="0" pz="100" resourceName="Graystroke_Regular" type="RESOURCE" h_alignment="CENTER" v_alignment="CENTER"></text>
+	    	</sprite>
+	    	
+ 	    	<sprite ID="1200" 	px="0" 		py="61" 	width="800" 	height="600" 	pz="0" resourceName="window" type="STATIC">
+				<sprite ID="1210" px="50" 	py="150" 	width="400" 	height="50"    pz="10" 	type="NULL_SPRITE">
+					<text   ID="114" message="score_scene_title" 
+					    	px="0" py="0" pz="10" scale="0.8" color="Forest_Green" resourceName="Graystroke_Regular" type="RESOURCE" 
+					   	 	h_alignment="CENTER" v_alignment="CENTER">
+					</text>
+				</sprite>
+				<progress_bar ID="1220" type="DISCRETE" persistent="true" persistent_value="GameLevel" px="50" py="200" width="400" height="80" pz="10" 
+ 	    	    	increment_button="sel_btn_plus" decrement_button="sel_btn_minus" bar_background="sel_bar" bar_progress_notch="sel_level"
+ 	    	    	min_value="1"
+ 	    	    	max_value="7"
+ 	    	    	internal_height="100">
+ 	    		</progress_bar>
+				<button ID="1230" persistent="true" persistent_value="MusicON" type="ON_OFF" int_dim="100" ext_dim="120" pz="10" px="300" py="500" action="" texture_ON="btnMusicON" 	texture_OFF="btnMusicOFF" on_click_message="SET_MUSIC_ONOFF" >
+				</button>
+			</sprite> 
+			
+			<sprite ID="1300" 	px="739" 	py="0" 		width="122" 	height="122" 	pz="10" resourceName="buttoncancel" 	type="CLICKABLE">
+				<event_handler ID ="1310" event="ON_CLICK" >
+			    	<modifier_list execution_order="SERIAL" UniqueName="ZoomInOut">
+	     				<modifier ID="2" typeSet="false" type="SCALE" duration="0.1" scale_begin="1" scale_end="1.2"/> 
+	     				<modifier ID="2" typeSet="false" type="SCALE" duration="0.1" scale_begin="1.2" scale_end="1"/> 
+	     			</modifier_list>
+	     	    	<post_mod_action ID="4" type="CLOSE_CHILD" 	/>
+				</event_handler>
+			</sprite>
+		</sprite>
 	</scene>
 </scenes>
