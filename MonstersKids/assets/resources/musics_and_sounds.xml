@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources xmlns="http://www.example.org/resources">
     <musics>
-       <music name="Startup" filename="Arcade.mid"></music>
-    </musics> 
+      <music name="Startup" filename="Arcade.mid"></music>
+    </musics>
+    <sounds>
+        <sound name="puzzlepieces_touch" 	filename="puzzlepieces_touch.ogg" 	duration="8"/>
+        <sound name="level_win" 			filename="level_win.ogg" 			duration="8"/>
+        <sound name="short_fanfare" 		filename="short_fanfare.ogg" 		duration="8"/>
+        <sound name="ta_da" 				filename="ta_da.ogg" 				duration="8"/>        
+    </sounds>
 </resources>

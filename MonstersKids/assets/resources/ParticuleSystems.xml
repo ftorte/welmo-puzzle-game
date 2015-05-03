@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <particule_system ID="1" name="successfire" resourceName="fireworks" type="POINT" centerX="600" centerY="400" rateMin="6" rateMax="10" particelsMax="200"> 
+	
+	<!-- INITIALIZERS -->
+	<!-- particleSystem.addParticleInitializer(new VelocityParticleInitializer<Sprite>(-90, 90, 90, -90)); -->
+	<initializer type="VELOCITY" min_velX="-90" max_velX="90" min_velY="90" max_velY="-90"/>
+    <!-- particleSystem.addParticleInitializer(new AccelerationParticleInitializer<Sprite>(60, 100)); -->
+	<initializer type="ACCELERATION" accX="60" accY="100"/>
+	<!-- particleSystem.addParticleInitializer(new RotationParticleInitializer<Sprite>(0.0f, 360.0f));  -->
+	<initializer type="ROTATION" min_rotation="-90" max_rotation="360"/>
+    <!-- particleSystem.addParticleInitializer(new ColorParticleInitializer<Sprite>(1.0f, 1.0f, 1.0f)); -->
+	<initializer type="COLOR_FIXED" red="1" green="0" blue="0"/>
+	  <!-- particleSystem.addParticleInitializer(new ColorParticleInitializer<Sprite>(1.0f, 1.0f, 1.0f)); -->
+	<initializer type="ALPHA" alpha="1"/>
+	
+	<!-- particleSystem.addParticleInitializer(new ExpireParticleInitializer<Sprite>(11.5f)); -->
+	<initializer type="EXPIRE" life_time="5"/>
+
+	<!-- MODIFIERS -->	
+	<!-- particleSystem.addParticleModifier(new ScaleParticleModifier<Sprite>(0, 5, 0.5f, 2.0f)); -->
+	<modifier type="SCALE" from_time="0" to_time="5" from_scale="0.5" to_scale="2"/>
+		
+	<!-- particleSystem.addParticleModifier(new AlphaParticleModifier<Sprite>(2.5f, 3.5f, 1.0f, 0.0f));-->
+	<!--  <modifier type="ALPHA" from_time="2.5" to_time="3.5" from_alpha="1" to_alpha="0"/> -->	
+	<!-- particleSystem.addParticleModifier(new AlphaParticleModifier<Sprite>(3.5f, 4.5f, 0.0f, 1.0f));-->
+	<!--  <modifier type="ALPHA" from_time="3.5" to_time="2.5" from_alpha="0" to_alpha="1"/> -->
+	<!-- particleSystem.addParticleModifier(new AlphaParticleModifier<Sprite>(4.5f, 11.5f, 1.0f, 0.0f));-->
+ 	<!-- <modifier type="ALPHA" from_time="4.5" to_time="11.5" from_alpha="1" to_alpha="0"/> -->
+			
+	<!-- pparticleSystem.addParticleModifier(new ColorParticleModifier<Sprite>(0.0f, 11.5f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f));-->
+	<!-- <modifier type="COLOR" from_time="0" to_time="11.5" from_red=0.133" to_red="0.133" from_green="0" to_green="0" from_blue="0" to_blue="1"/> -->
+ 
+ </particule_system>
