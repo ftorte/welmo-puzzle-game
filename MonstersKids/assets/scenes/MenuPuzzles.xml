@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <scenes xmlns="http://www.example.org/scene">
-    <scene name="MenuPuzzles01" sceneFather="OpenScene">
+    <scene name="MenuPuzzles01" sceneFather="MainMenu">
         <scene_launcher_btn isTemplate="true" ID="100" height="200" width="200" pz="10" px="195" py="170" status_default="NotActive" 
 		    licence="monsters_4to24"
 		    back_ground_inactive	="yellow_btn;0;0;200;200"
@@ -27,7 +27,7 @@
       		</modifier_list>
       		<pre_mod_action ID="1" type="CHANGE_Z_ORDER" pz="100"/>
       		<post_mod_action ID="1" type="CHANGE_Z_ORDER" pz="1"/>
-      		<post_mod_action ID="4" type="CHANGE_TO_CHILD_SCENE" next_scene="OpenScene"/>
+      		<post_mod_action ID="4" type="CHANGE_TO_CHILD_SCENE" next_scene="MainMenu"/>
   		</event_handler>
   		
          <event_handler ID ="1001" event="ON_CLICK">
@@ -77,14 +77,14 @@
       	</sprite> 
        	<sprite ID="1100" height="160" width="160" pz="10" px="27" py="630" resourceName="back2level_btn" type="CLICKABLE">
           	<event_handler cloneID ="1000" event="ON_CLICK">
-              	<post_mod_action ID="4" type="CHANGE_SCENE" next_scene="OpenScene"/>
+              	<post_mod_action ID="4" type="CHANGE_SCENE" next_scene="MainMenu"/>
           	</event_handler>
       	</sprite> 
 	</scene>
       	
     
   	
-	<scene name="MenuPuzzles02" sceneFather="OpenScene">
+	<scene name="MenuPuzzles02" sceneFather="MainMenu">
         <scene_launcher_btn isTemplate="true" ID="100" height="200" width="200" pz="10" px="195" py="170" status_default="level0"
 		    licence="monsters_4to24"
 		 	back_ground_inactive	="yellow_btn;0;0;200;200"
@@ -110,7 +110,7 @@
       		</modifier_list>
       		<pre_mod_action ID="1" type="CHANGE_Z_ORDER" pz="100"/>
       		<post_mod_action ID="1" type="CHANGE_Z_ORDER" pz="1"/>
-      		<post_mod_action ID="4" type="CHANGE_SCENE" next_scene="OpenScene"/>
+      		<post_mod_action ID="4" type="CHANGE_SCENE" next_scene="MainMenu"/>
   		</event_handler>
   		
          <event_handler ID ="1001" event="ON_CLICK">
@@ -166,13 +166,13 @@
       	</sprite> 
        	<sprite ID="1200" height="160" width="160" pz="10" px="27" py="630" resourceName="back2level_btn" type="CLICKABLE">
           	<event_handler cloneID ="1000" event="ON_CLICK">
-              	<post_mod_action ID="4" type="CHANGE_SCENE" next_scene="OpenScene"/>
+              	<post_mod_action ID="4" type="CHANGE_SCENE" next_scene="MainMenu"/>
           	</event_handler>
       	</sprite>  
   	</scene>
   	
   	
-	<scene name="MenuPuzzles03" sceneFather="OpenScene">
+	<scene name="MenuPuzzles03" sceneFather="MainMenu">
 		<scene_launcher_btn isTemplate="true" ID="100" height="200" width="200" pz="10" px="195" py="170" status_default="level0"
 		    licence="monsters_4to24"
 		 	back_ground_inactive	="yellow_btn;0;0;200;200"
@@ -198,7 +198,7 @@
       		</modifier_list>
       		<pre_mod_action ID="1" type="CHANGE_Z_ORDER" pz="100"/>
       		<post_mod_action ID="1" type="CHANGE_Z_ORDER" pz="1"/>
-      		<post_mod_action ID="4" type="CHANGE_SCENE" next_scene="OpenScene"/>
+      		<post_mod_action ID="4" type="CHANGE_SCENE" next_scene="MainMenu"/>
   		</event_handler>
   		
   		<event_handler ID ="1001" event="ON_CLICK">
@@ -253,13 +253,13 @@
       	</sprite> 
        	<sprite ID="1200" height="160" width="160" pz="10" px="27" py="630" resourceName="back2level_btn" type="CLICKABLE">
           	<event_handler cloneID ="1000" event="ON_CLICK">
-              	<post_mod_action ID="4" type="CHANGE_SCENE" next_scene="OpenScene"/>
+              	<post_mod_action ID="4" type="CHANGE_SCENE" next_scene="MainMenu"/>
           	</event_handler>
       	</sprite>  
   	</scene>
   	
   	
-	<scene name="MenuPuzzles04" sceneFather="OpenScene">
+	<scene name="MenuPuzzles04" sceneFather="MainMenu">
 		<scene_launcher_btn isTemplate="true" ID="100" height="200" width="200" pz="10" px="195" py="170" status_default="level0"
 		    licence="monsters_4to24"
 		 	back_ground_inactive	="yellow_btn;0;0;200;200"
@@ -286,7 +286,7 @@
       		</modifier_list>
       		<pre_mod_action ID="1" type="CHANGE_Z_ORDER" pz="100"/>
       		<post_mod_action ID="1" type="CHANGE_Z_ORDER" pz="1"/>
-      		<post_mod_action ID="4" type="CHANGE_SCENE" next_scene="OpenScene"/>
+      		<post_mod_action ID="4" type="CHANGE_SCENE" next_scene="MainMenu"/>
   		</event_handler>
   		
   		<event_handler ID ="1001" event="ON_CLICK">
@@ -324,7 +324,7 @@
       	</sprite> 
        	<sprite ID="1100" height="160" width="160" pz="10" px="27" py="630" resourceName="back2level_btn" type="CLICKABLE">
           	<event_handler cloneID ="1000" event="ON_CLICK">
-              	<post_mod_action ID="4" type="CHANGE_SCENE" next_scene="OpenScene"/>
+              	<post_mod_action ID="4" type="CHANGE_SCENE" next_scene="MainMenu"/>
           	</event_handler>
       	</sprite>  
   	</scene>

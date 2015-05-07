@@ -3,6 +3,7 @@
 	<fonts>
         <font name="Kartoons" txtdimX="256" txtdimY="256" size="72" color="White" antialiasing="true" filename="kartoons.ttf"></font>
         <font name="Graystroke_Regular" txtdimX="256" txtdimY="256" size="48" color="White" antialiasing="true" filename="GRAYSTROKE REGULAR.otf"></font>
+        <font name="Graystroke_Regular" txtdimX="256" txtdimY="256" size="48" color="White" antialiasing="true" filename="GRAYSTROKE REGULAR.otf"></font>
         <font name="Graystroke_Medium"  txtdimX="256" txtdimY="256" size="36" color="White" antialiasing="true" filename="GRAYSTROKE REGULAR.otf"></font>
         <font name="Graystroke_Small"  txtdimX="256" txtdimY="256" size="24" color="White" antialiasing="true" filename="GRAYSTROKE REGULAR.otf"></font>
      </fonts>
