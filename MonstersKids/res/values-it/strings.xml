@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Monsters Kids</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+	<!-- Customs string for the GUIs -->
+    <string name="score_scene_title">Livello Completato</string>
+    <string name="score_scene_time">Tempo</string>
+    <string name="score_scene_points">Punti</string>
+    <string name="in_app_purchasing_message">Compra il livello"</string>
+    <string name="locked">Devi risolvere i puzzles precedenti per sbloccare questo puzzle</string>
+    <string name="game_level">Difficolta Puzzle (Num Pezzi)</string>
+    <string name="config_screen_title">Configura</string>
+    <string name="music_onoff"> Musica ON/OFF</string>
+</resources>
