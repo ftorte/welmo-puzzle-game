@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources xmlns="http://www.example.org/resources">
     <musics>
-      <music name="Startup" filename="Arcade.mid"></music>
     </musics>
     <sounds>
         <sound name="puzzlepieces_touch" 	filename="puzzlepieces_touch.ogg" 	duration="8"/>

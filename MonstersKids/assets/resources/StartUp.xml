@@ -11,7 +11,18 @@
             <textureregion name="BthOval" 		filename="buttons/Oval_btn.png" 		type="PNG"></textureregion>
         </texture>
     </textures> 
+    <textures name="spritesheetsbis">
+        <texture name="spritesheet_02" height="2048" width="2048" autopacking="true">
+           <textureregion name="LooneySpaceMonsters" 	filename="sprites/LooneySpaceMonsters.png" 		type="PNG"></textureregion>
+           <textureregion name="btn_medium" 			filename="sprites/btn_medium.png" 				type="PNG"></textureregion>
+           <textureregion name="btn_medium_flat" 		filename="sprites/btn_medium_flat.png" 			type="PNG"></textureregion>
+           <textureregion name="txt_configure" 			filename="sprites/txt_configure.png" 			type="PNG"></textureregion>
+           <textureregion name="txt_play" 				filename="sprites/txt_play.png" 				type="PNG"></textureregion>
+           <textureregion name="txt_title" 				filename="sprites/txt_title.png" 				type="PNG"></textureregion>   
+        </texture>
+    </textures> 
     <musics>
        <music name="Startup" filename="Arcade.mid"></music>
+       <music name="StartupBis" filename="RagtimeLoop.ogg"></music>
     </musics>    
 </resources>

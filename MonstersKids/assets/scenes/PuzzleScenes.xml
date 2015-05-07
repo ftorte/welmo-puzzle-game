@@ -6,15 +6,15 @@
           <sprite ID="101" width="1280" height="800" pz="0" px="0" py="0" resourceName="sky" type="STATIC"></sprite>
       </background>
      
-      <puzzle_sprite ID="201" height="800" width="1280"  px="10" py="0" resourceName="RgnDynamicTLDMonster01" hasWhiteBackground="true" 
-          nbOfColumns="4" nbOfRows="4" puzzleZone="600;100;600;600" puzzleBox="50;50;500;700" ActiveZone ="true" ActiveZoneBorders="true"
+      <puzzle_sprite ID="201" height="800" width="1280"  px="0" py="0" pz="20" resourceName="RgnDynamicTLDMonster01" hasWhiteBackground="true" 
+          nbOfColumns="4" nbOfRows="4" puzzleZone="600;50;630;700" puzzleBox="50;50;500;700" ActiveZone ="true" ActiveZoneBorders="true"
           ActiveBorder="true" HasHelperImg="true" persistence="true" persistent_value="GameLevel"
           GameLevelsMap="{ 'GameLevelsMap': [[0,3,3,9],[1,4,4,16],[2,5,4,20],[3,6,4,24],[4,6,5,30],[5,8,5,40],[6,8,6,48],[7,8,8,64]]}" >
           <!-- fireworks="successfire" fireworks_duration="500"> --> 
       </puzzle_sprite>    
      
       <!--  Nevigation Backward to Menu -->  
-      <sprite ID="1100" height="120" width="120" pz="10" px="20" py="20" resourceName="back2level_btn" type="CLICKABLE">
+      <sprite ID="1100" height="120" width="120" pz="1" px="20" py="20" resourceName="back2level_btn" type="CLICKABLE">
          <event_handler ID ="1000" event="ON_CLICK">
            <modifier_list execution_order="SERIAL" UniqueName="ZoomInOut">
       	     <modifier ID="2" typeSet="false" type="SCALE" duration="0.3" scale_begin="1" scale_end="1.2"/> 
@@ -27,7 +27,7 @@
       </sprite> 
       
       
-      <!--  Configure button -->  
+      <!--  Configure button  
       <sprite ID="2000" height="120" width="120" pz="10" px="1140" py="20" resourceName="config_btn" type="CLICKABLE">
          <event_handler ID ="1000" event="ON_CLICK">
            <modifier_list execution_order="SERIAL" UniqueName="ZoomInOut">
@@ -38,13 +38,13 @@
       	   <post_mod_action ID="1" type="CHANGE_Z_ORDER" pz="1"/>
            <post_mod_action ID="4" type="CHANGE_TO_CHILD_SCENE" next_scene="Configure"/>
          </event_handler>
-      </sprite> 
+      </sprite> -->  
       
       <!--  Music OnOff button -->   
-      <button ID="3000" persistent= "true" persistent_value="MusicON" type="ON_OFF" int_dim ="100" ext_dim="120" pz="10" px="1140" py="660" action="" texture_ON="btnMusicON" 	texture_OFF="btnMusicOFF" 
+      <button ID="3000" persistent= "true" persistent_value="MusicON" type="ON_OFF" int_dim ="120" ext_dim="120" pz="1" px="1160" py="20" action="" texture_ON="btnMusicON" 	texture_OFF="btnMusicOFF" 
         		    on_click_message="SET_MUSIC_ONOFF"/>
       	
-      <sprite ID="4000" width="1280" height="237" pz="10" px="0" py="673" orientation="0" resourceName="planetground" type="STATIC"></sprite> 
+      <sprite ID="4000" width="1280" height="237" pz="1" px="0" py="673" orientation="0" resourceName="planetground" type="STATIC"></sprite> 
     </scene>
     <!-- 
     	Scene instantiation parameter

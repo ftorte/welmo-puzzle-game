@@ -144,29 +144,32 @@
 	
 	
 	<scene name="Configure" class_name="com.welmo.andengine.scenes.ManageableCameraScene">	
-	    <sprite ID="1000" 		px="240" 	py="39" 	width="861" 	height="661" 	pz="0" 									type="NULL_SPRITE">
-	        <sprite ID="1100" 	px="200" 	py="30" 	width="400" 	height="90" 	pz="10" 	resourceName="titlebar" 		type="STATIC">
-	    	    <text   ID="114" message="score_scene_title"   px="0" py="0" pz="100" resourceName="Graystroke_Regular" type="RESOURCE" h_alignment="CENTER" v_alignment="CENTER"></text>
+	    <sprite ID="1000" 		px="240" 	py="39" 	width="861" 	height="500" 	pz="0" 									type="NULL_SPRITE">
+	    	
+	        <sprite ID="1100" 	px="200" 	py="30" 	width="400" 	height="90" 	pz="20" 	resourceName="titlebar" 		type="STATIC">
+	    	    <text   ID="114" message="config_screen_title"   px="0" py="0" pz="21" resourceName="Graystroke_Regular" type="RESOURCE" h_alignment="CENTER" v_alignment="CENTER"></text>
 	    	</sprite>
 	    	
- 	    	<sprite ID="1200" 	px="0" 		py="61" 	width="800" 	height="600" 	pz="0" resourceName="window" type="STATIC">
-				<sprite ID="1210" px="50" 	py="150" 	width="400" 	height="50"    pz="10" 	type="NULL_SPRITE">
-					<text   ID="114" message="score_scene_title" 
-					    	px="0" py="0" pz="10" scale="0.8" color="Forest_Green" resourceName="Graystroke_Regular" type="RESOURCE" 
-					   	 	h_alignment="CENTER" v_alignment="CENTER">
-					</text>
+ 	    	<sprite ID="1200" 	px="0" 		py="61" 	width="800" 	height="500" 	pz="10" resourceName="window" type="STATIC">
+ 	    	    <sprite ID="1210" 	px="50" 	py="80" 	width="700" 	height="250"    pz="11" type="NULL_SPRITE">			
+ 	    	        <text   ID="1211" message="game_level" px="0" py="10" pz="12" scale="1" color="Forest_Green" resourceName="Graystroke_Regular" type="RESOURCE" />
+					<progress_bar ID="1212" type="DISCRETE" persistent="true" persistent_value="GameLevel" px="0" py="80" width="550" height="100" pz="12" 
+ 	    	    		increment_button="sel_btn_plus" decrement_button="sel_btn_minus" bar_background="sel_bar" bar_progress_notch="sel_level"
+ 	    	    		min_value="1"
+ 	    	    		max_value="7"
+ 	    	    		internal_height="100"
+ 	    	    		displayID="12131"
+ 	    	    		MapDisplayValues="{ 'MapDisplayValues': [[0,9],[1,16],[2,20],[3,24],[4,30],[5,40],[6,48],[7,64]]}" >
+ 	    				<text   ID="12131" px="600" py="40" pz="11" scale="2" message="level" color="Forest_Green" resourceName="Graystroke_Regular" type="SIMPLE"/>
+	     			</progress_bar>	
+	     			<button ID="1214" persistent="true" persistent_value="MusicON" type="ON_OFF" int_dim="120" ext_dim="120" 
+				    	pz="1" px="-5" py="220" action="" texture_ON="btnMusicON" 	texture_OFF="btnMusicOFF" on_click_message="SET_MUSIC_ONOFF"  displayID="12131" >
+ 	    				<text   ID="12151" px="120" py="24" pz="11" scale="1.5" message="music_onoff" color="Forest_Green" resourceName="Graystroke_Regular" type="RESOURCE" />
+					</button>
 				</sprite>
-				<progress_bar ID="1220" type="DISCRETE" persistent="true" persistent_value="GameLevel" px="50" py="200" width="400" height="80" pz="10" 
- 	    	    	increment_button="sel_btn_plus" decrement_button="sel_btn_minus" bar_background="sel_bar" bar_progress_notch="sel_level"
- 	    	    	min_value="1"
- 	    	    	max_value="7"
- 	    	    	internal_height="100">
- 	    		</progress_bar>
-				<button ID="1230" persistent="true" persistent_value="MusicON" type="ON_OFF" int_dim="100" ext_dim="120" pz="10" px="300" py="500" action="" texture_ON="btnMusicON" 	texture_OFF="btnMusicOFF" on_click_message="SET_MUSIC_ONOFF" >
-				</button>
 			</sprite> 
-			
-			<sprite ID="1300" 	px="739" 	py="0" 		width="122" 	height="122" 	pz="10" resourceName="buttoncancel" 	type="CLICKABLE">
+						 
+			<sprite ID="1300" 	px="739" 	py="0" 		width="122" 	height="122" 	pz="20" resourceName="buttoncancel" 	type="CLICKABLE">
 				<event_handler ID ="1310" event="ON_CLICK" >
 			    	<modifier_list execution_order="SERIAL" UniqueName="ZoomInOut">
 	     				<modifier ID="2" typeSet="false" type="SCALE" duration="0.1" scale_begin="1" scale_end="1.2"/> 
