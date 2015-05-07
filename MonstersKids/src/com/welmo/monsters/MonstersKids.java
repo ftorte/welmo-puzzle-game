@@ -165,10 +165,11 @@ public class MonstersKids extends SimpleWelmoActivity {
 		setStartSceneDscFile("scenes/StartUp.xml");
 		
 		//setup the starting scene name
-		setFirstSceneName("OpenScene",1000);	
+		setFirstSceneName("OpenScene",2000);	
 		
 		//setup the first scene name
-		setMainSceneName("MenuPuzzles01");
+		//setMainSceneName("MenuPuzzles01");
+		setMainSceneName("MainMenu");
 		
 		//setup the scene dimensions
 		setCameraWidth(1280);
