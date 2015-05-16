@@ -11,9 +11,13 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.util.Log;
 
+import com.welmo.andengine.managers.SceneDescriptorsManager;
+import com.welmo.andengine.managers.SceneManager;
 import com.welmo.andengine.managers.SharedPreferenceManager;
 import com.welmo.andengine.scenes.IConfigurableScene;
 import com.welmo.andengine.scenes.ManageableScene;
+import com.welmo.andengine.scenes.descriptors.ConfiguredSceneDescriptor;
+import com.welmo.andengine.scenes.descriptors.SceneDescriptor;
 import com.welmo.andengine.scenes.descriptors.components.ButtonSceneLauncherDescriptor;
 import com.welmo.andengine.scenes.operations.Operation;
 import com.welmo.andengine.ui.SimpleWelmoActivity;
@@ -32,7 +36,7 @@ import com.welmo.andengine.utility.inappbilling.PurchasingManager;
 public class MonstersKids extends SimpleWelmoActivity {
 	private final static String 		TAG ="MonstersKids";
 	//list of resources file to load while showing the startup file
-	static final HashMap<String , String> NEXT_SCENE_LAUNCHER = new HashMap<String , String>() {
+	static final HashMap<String ,String> NEXT_SCENE_LAUNCHER = new HashMap<String , String>() {
 		private static final long serialVersionUID = 1L;
 
 	{
@@ -63,8 +67,11 @@ public class MonstersKids extends SimpleWelmoActivity {
 	    put("PuzzleMonster25",    "PuzzleMonster26");
 	    put("PuzzleMonster26",    "PuzzleMonster27");
 	    put("PuzzleMonster27",    "PuzzleMonster28");
-	    put("PuzzleMonster28",    "MenuPuzzles04");
-	    
+	    put("PuzzleMonster28",    "PuzzleMonster29");
+	    put("PuzzleMonster29",    "PuzzleMonster30");
+	    put("PuzzleMonster30",    "PuzzleMonster31");
+	    put("PuzzleMonster31",    "PuzzleMonster32");
+	    put("PuzzleMonster32",    "MenuPuzzles04");
 	}};
 	//list of resources file to load while showing the startup file
 	static final HashMap<String , String> MENU_SCENE_LAUNCHER = new HashMap<String , String>() {
@@ -99,7 +106,10 @@ public class MonstersKids extends SimpleWelmoActivity {
 			put("PuzzleMonster26",    "MenuPuzzles04");
 			put("PuzzleMonster27",    "MenuPuzzles04");
 			put("PuzzleMonster28",    "MenuPuzzles04");
-
+			put("PuzzleMonster29",    "MenuPuzzles04");
+			put("PuzzleMonster30",    "MenuPuzzles04");
+			put("PuzzleMonster31",    "MenuPuzzles04");
+			put("PuzzleMonster32",    "MenuPuzzles04");
 		}};
 
 		private SharedPreferenceManager 	pSPM=null;
@@ -129,6 +139,7 @@ public class MonstersKids extends SimpleWelmoActivity {
 			"scenes/MenuPuzzles.xml",
 			"scenes/PuzzleScenes.xml",
 			"scenes/ModalChildScenes.xml",
+			"scenes/ConfigureChildScenes.xml"
 	};
 	private final String[] particuleSuystemFiles = {
 			"resources/ParticuleSystems.xml"
@@ -251,13 +262,35 @@ public class MonstersKids extends SimpleWelmoActivity {
 	public void onGoToNextLevel() {
 		ManageableScene currentScene = (ManageableScene)this.mEngine.getScene();
 		String newScene = null;
+		
 		if(currentScene instanceof IConfigurableScene)
 			newScene = NEXT_SCENE_LAUNCHER.get(((IConfigurableScene)currentScene).getNameOfInstantiatedScene());
 		else	
 			newScene = NEXT_SCENE_LAUNCHER.get(currentScene.getpSCDescriptor().sceneName);
 		
-		if(newScene != null)
-			onChangeScene(newScene);
-		
+		//check if the use has purchased the license for the scene
+		if(newScene != null){
+			//get scene descriptor
+			SceneDescriptor pSDesc;
+			ConfiguredSceneDescriptor pCfgSDesc;
+			String theLicence = null;
+			
+			if((pSDesc = SceneDescriptorsManager.getInstance().getScene(newScene)) != null)
+				theLicence = pSDesc.getSceneLicenceID();
+			else
+				if((pCfgSDesc = SceneDescriptorsManager.getInstance().getCFGScene(newScene))!= null)
+					theLicence = pCfgSDesc.getSceneLicenceID();
+				else
+					theLicence = "default";
+			if(!theLicence.equalsIgnoreCase("default")){
+				if(!mInventory.hasPurchase(theLicence)){		//check if has the licence to show the requested scene
+					newScene = "IAP_monsters_4to24"; 			//if not launch scene to by the lincence	
+					onChangeChildScene(newScene);
+					return;
+				}
+			}
+		}
+		onChangeScene(newScene);
+		return;
 	}
 }
