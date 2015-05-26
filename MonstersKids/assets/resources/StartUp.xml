@@ -18,7 +18,11 @@
            <textureregion name="btn_medium_flat" 		filename="sprites/btn_medium_flat.png" 			type="PNG"></textureregion>
            <textureregion name="txt_configure" 			filename="sprites/txt_configure.png" 			type="PNG"></textureregion>
            <textureregion name="txt_play" 				filename="sprites/txt_play.png" 				type="PNG"></textureregion>
-           <textureregion name="txt_title" 				filename="sprites/txt_title.png" 				type="PNG"></textureregion>   
+           <textureregion name="txt_title" 				filename="sprites/txt_title.png" 				type="PNG"></textureregion>
+           <textureregion name="txt_credits"			filename="sprites/txt_credits.png"				type="PNG"></textureregion>   
+           <textureregion name="txt_poweredby"			filename="sprites/txt_poweredby.png"			type="PNG"></textureregion>   
+           <textureregion name="txt_imagesfrom"			filename="sprites/txt_imagesfrom.png"			type="PNG"></textureregion>   
+           
         </texture>
     </textures> 
     <musics>

@@ -315,16 +315,16 @@
     	<scene_launcher_btn isIstanceOfID ="100" pz="10" ID="500" px="885" py="170" ico_free="RgnMonster28;30;20;140;140" status_default="Locked" next_scene="PuzzleMonster28">
     		<event_handler cloneID ="1000" event="ON_CLICK" ><post_mod_action ID="4" type="CHANGE_SCENE" next_scene="PuzzleMonster28"/></event_handler>
         </scene_launcher_btn>
-    	<scene_launcher_btn isIstanceOfID ="100" pz="10" ID="600" px="195" py="400" ico_free="RgnMonster29;30;20;140;140" status_default="Locked" next_scene="PuzzleMonster21">
+    	<scene_launcher_btn isIstanceOfID ="100" pz="10" ID="600" px="195" py="400" ico_free="RgnMonster29;30;20;140;140" status_default="Locked" next_scene="PuzzleMonster29">
     		<event_handler cloneID ="1000" event="ON_CLICK" ><post_mod_action ID="4" type="CHANGE_SCENE" next_scene="PuzzleMonster29"/></event_handler>
         </scene_launcher_btn>
-    	<scene_launcher_btn isIstanceOfID ="100" pz="10" ID="700" px="425" py="400" ico_free="RgnMonster30;30;20;140;140" status_default="Locked" next_scene="PuzzleMonster22">
+    	<scene_launcher_btn isIstanceOfID ="100" pz="10" ID="700" px="425" py="400" ico_free="RgnMonster30;30;20;140;140" status_default="Locked" next_scene="PuzzleMonster30">
     		<event_handler cloneID ="1000" event="ON_CLICK" ><post_mod_action ID="4" type="CHANGE_SCENE" next_scene="PuzzleMonster30"/></event_handler>
         </scene_launcher_btn>
-    	<scene_launcher_btn isIstanceOfID ="100" pz="10" ID="800" px="655" py="400" ico_free="RgnMonster31;30;20;140;140" status_default="Locked" next_scene="PuzzleMonster23">
+    	<scene_launcher_btn isIstanceOfID ="100" pz="10" ID="800" px="655" py="400" ico_free="RgnMonster31;30;20;140;140" status_default="Locked" next_scene="PuzzleMonster31">
     		<event_handler cloneID ="1000" event="ON_CLICK" ><post_mod_action ID="4" type="CHANGE_SCENE" next_scene="PuzzleMonster31"/></event_handler>
         </scene_launcher_btn>
-    	<scene_launcher_btn isIstanceOfID ="100" pz="10" ID="900" px="885" py="400" ico_free="RgnMonster32;30;20;140;140" status_default="Locked" next_scene="PuzzleMonster24">
+    	<scene_launcher_btn isIstanceOfID ="100" pz="10" ID="900" px="885" py="400" ico_free="RgnMonster32;30;20;140;140" status_default="Locked" next_scene="PuzzleMonster32">
     		<event_handler cloneID ="1000" event="ON_CLICK" ><post_mod_action ID="4" type="CHANGE_SCENE" next_scene="PuzzleMonster32"/></event_handler>
         </scene_launcher_btn>
     	
@@ -336,10 +336,100 @@
 		        <post_mod_action ID="4" type="CHANGE_SCENE" next_scene="MenuPuzzles03"/>
 		    </event_handler>
       	</sprite> 
-       	<sprite ID="1100" height="160" width="160" pz="10" px="27" py="630" resourceName="back2level_btn" type="CLICKABLE">
+		<sprite ID="1100" height="160" width="160" pz="10" px="1112" py="320" resourceName="forward_btn" type="CLICKABLE">
+          	<event_handler cloneID ="1000" event="ON_CLICK">
+              	<post_mod_action ID="4" type="CHANGE_SCENE" next_scene="MenuPuzzles05"/>
+          	</event_handler>
+      	</sprite> 
+       	<sprite ID="1200" height="160" width="160" pz="10" px="27" py="630" resourceName="back2level_btn" type="CLICKABLE">
           	<event_handler cloneID ="1000" event="ON_CLICK">
               	<post_mod_action ID="4" type="CHANGE_SCENE" next_scene="MainMenu"/>
           	</event_handler>
       	</sprite>  
+      	 
+  	</scene>
+  	
+	<scene name="MenuPuzzles05" sceneFather="MainMenu">
+		<scene_launcher_btn isTemplate="true" ID="100" height="200" width="200" pz="10" px="195" py="170" status_default="level0"
+		    licence="monsters_4to24"
+		 	back_ground_inactive	="yellow_btn;0;0;200;200"
+		    ico_inactive			="disabled;25;25;150;150"
+			back_ground_final		="yellow_btn;0;0;200;200"
+			ico_locked				="locked;25;25;150;150"
+			ico_unlocked			="unlocked;25;25;150;150"
+			ico_free				="RgnMonster01;30;20;140;140"
+			ico_star_1				="star_lvl_2;20;120;40;40"
+			ico_star_2				="star_lvl_2;80;150;40;40"
+			ico_star_3				="star_lvl_2;140;120;40;40"
+			ico_star_inactive_1		="star_disabled_lvl_2;20;120;40;40"
+			ico_star_inactive_2		="star_disabled_lvl_2;80;150;40;40"
+			ico_star_inactive_3		="star_disabled_lvl_2;140;120;40;40"
+			unlock_condition="purchasing:monsters_4to24">
+          	<event_handler cloneID ="1001" event="CLICK_ON_LOCKED"><post_mod_action ID="4" type="CHANGE_TO_CHILD_SCENE" next_scene="PuzzleLocked"/></event_handler>
+          	<event_handler cloneID ="1001" event="CLICK_ON_NOTACTIVE"><post_mod_action ID="4" type="CHANGE_TO_CHILD_SCENE" next_scene="IAP_monsters_4to24"/></event_handler>
+      	</scene_launcher_btn>
+      	
+        <event_handler ID ="1000" event="ON_CLICK">
+            <modifier_list execution_order="SERIAL" UniqueName="ZoomInOut">
+      			<modifier ID="2" typeSet="false" type="SCALE" duration="0.3" scale_begin="1" scale_end="1.2"/> 
+      			<modifier ID="2" typeSet="false" type="SCALE" duration="0.3" scale_begin="1.2" scale_end="1"/> 
+      		</modifier_list>
+      		<pre_mod_action ID="1" type="CHANGE_Z_ORDER" pz="100"/>
+      		<post_mod_action ID="1" type="CHANGE_Z_ORDER" pz="1"/>
+      		<post_mod_action ID="4" type="CHANGE_SCENE" next_scene="MainMenu"/>
+  		</event_handler>
+  		
+  		<event_handler ID ="1001" event="ON_CLICK">
+            <modifier_list execution_order="SERIAL" UniqueName="ZoomInOut">
+      			<modifier ID="2" typeSet="false" type="SCALE" duration="0.1" scale_begin="1" scale_end="1.2"/> 
+      			<modifier ID="2" typeSet="false" type="SCALE" duration="0.1" scale_begin="1.2" scale_end="1"/> 
+      		</modifier_list>
+      		<pre_mod_action ID="1" type="CHANGE_Z_ORDER" pz="100"/>
+      		<post_mod_action ID="1" type="CHANGE_Z_ORDER" pz="1"/>
+  		</event_handler>
+  		
+    	<background ID="100" type="SPRITE" >
+      		<sprite ID="101" width="1280" height="800" pz="0" px="0" py="0" resourceName="sky" type="STATIC"></sprite>
+    	</background>
+    	
+    	<!-- list of buttons -->
+    	<scene_launcher_btn isIstanceOfID ="100" ID="200" px="195" py="170" ico_free="RgnMonster33;30;20;140;140" status_default="Locked" next_scene="PuzzleMonster33">
+    		<event_handler cloneID ="1000" event="ON_CLICK" ><post_mod_action ID="4" type="CHANGE_SCENE" next_scene="PuzzleMonster33"/></event_handler>
+        </scene_launcher_btn>
+    	<scene_launcher_btn isIstanceOfID ="100" ID="300" px="425" py="170" ico_free="RgnMonster34;30;20;140;140" status_default="Locked" next_scene="PuzzleMonster34">
+    		<event_handler cloneID ="1000" event="ON_CLICK" ><post_mod_action ID="4" type="CHANGE_SCENE" next_scene="PuzzleMonster34"/></event_handler>
+    	</scene_launcher_btn>
+    	<scene_launcher_btn isIstanceOfID ="100" pz="10" ID="400" px="655" py="170" ico_free="RgnMonster35;30;20;140;140" status_default="Locked" next_scene="PuzzleMonster35">
+    		<event_handler cloneID ="1000" event="ON_CLICK" ><post_mod_action ID="4" type="CHANGE_SCENE" next_scene="PuzzleMonster35"/></event_handler>
+   		</scene_launcher_btn>
+    	<scene_launcher_btn isIstanceOfID ="100" pz="10" ID="500" px="885" py="170" ico_free="RgnMonster36;30;20;140;140" status_default="Locked" next_scene="PuzzleMonster36">
+    		<event_handler cloneID ="1000" event="ON_CLICK" ><post_mod_action ID="4" type="CHANGE_SCENE" next_scene="PuzzleMonster36"/></event_handler>
+        </scene_launcher_btn>
+    	<scene_launcher_btn isIstanceOfID ="100" pz="10" ID="600" px="195" py="400" ico_free="RgnMonster37;30;20;140;140" status_default="Locked" next_scene="PuzzleMonster37">
+    		<event_handler cloneID ="1000" event="ON_CLICK" ><post_mod_action ID="4" type="CHANGE_SCENE" next_scene="PuzzleMonster37"/></event_handler>
+        </scene_launcher_btn>
+    	<scene_launcher_btn isIstanceOfID ="100" pz="10" ID="700" px="425" py="400" ico_free="RgnMonster38;30;20;140;140" status_default="Locked" next_scene="PuzzleMonster38">
+    		<event_handler cloneID ="1000" event="ON_CLICK" ><post_mod_action ID="4" type="CHANGE_SCENE" next_scene="PuzzleMonster38"/></event_handler>
+        </scene_launcher_btn>
+    	<scene_launcher_btn isIstanceOfID ="100" pz="10" ID="800" px="655" py="400" ico_free="RgnMonster39;30;20;140;140" status_default="Locked" next_scene="PuzzleMonster39">
+    		<event_handler cloneID ="1000" event="ON_CLICK" ><post_mod_action ID="4" type="CHANGE_SCENE" next_scene="PuzzleMonster39"/></event_handler>
+        </scene_launcher_btn>
+    	<scene_launcher_btn isIstanceOfID ="100" pz="10" ID="900" px="885" py="400" ico_free="RgnMonster40;30;20;140;140" status_default="Locked" next_scene="PuzzleMonster40">
+    		<event_handler cloneID ="1000" event="ON_CLICK" ><post_mod_action ID="4" type="CHANGE_SCENE" next_scene="PuzzleMonster40"/></event_handler>
+        </scene_launcher_btn>
+    	
+      	
+      	<!--  Nevigation Backward & Forward --> 
+		<sprite ID="1000" height="160" width="160" pz="10" px="27" py="320" resourceName="back_btn" type="CLICKABLE">
+		    <event_handler cloneID ="1000" event="ON_CLICK">
+		        <post_mod_action ID="4" type="CHANGE_SCENE" next_scene="MenuPuzzles04"/>
+		    </event_handler>
+      	</sprite> 
+       	<sprite ID="1200" height="160" width="160" pz="10" px="27" py="630" resourceName="back2level_btn" type="CLICKABLE">
+          	<event_handler cloneID ="1000" event="ON_CLICK">
+              	<post_mod_action ID="4" type="CHANGE_SCENE" next_scene="MainMenu"/>
+          	</event_handler>
+      	</sprite>  
+      	 
   	</scene>
 </scenes>

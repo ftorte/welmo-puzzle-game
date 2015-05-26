@@ -41,7 +41,7 @@
       		<post_mod_action ID="4" type="CHANGE_SCENE" next_scene="MenuPuzzles01"/>
   		</event_handler>	    
    	</sprite>
-   	
+   	<!-- Button Configure --> 
    	<sprite ID="107" width="390" height="92" px="860" py="610" pz="10" resourceName="btn_medium_flat" type="CLICKABLE">
    		<sprite ID="108" width="291" height="52" px="50" py="22" pz="20" resourceName="txt_configure" type="STATIC"></sprite>	
    		<event_handler ID ="10601" event="ON_CLICK">
@@ -53,6 +53,23 @@
       		<post_mod_action ID="1" type="CHANGE_Z_ORDER" pz="1"/>
       		<post_mod_action ID="4" type="CHANGE_TO_CHILD_SCENE" next_scene="Configure"/>
   		</event_handler>    
-   	</sprite>   	
+   	</sprite>
+   	
+   	<!-- Button Credits -->   
+   	<sprite ID="108" width="200" height="50" px="1000" py="730" pz="20" resourceName="txt_credits" type="CLICKABLE">	
+   		<event_handler ID ="10801" event="ON_CLICK">
+        	<modifier_list execution_order="SERIAL" UniqueName="ZoomInOut">
+      			<modifier ID="2" typeSet="false" type="SCALE" duration="0.1" scale_begin="1" scale_end="1.1"/> 
+      			<modifier ID="2" typeSet="false" type="SCALE" duration="0.1" scale_begin="1.1" scale_end="1"/> 
+      		</modifier_list>
+      		<pre_mod_action ID="1" type="CHANGE_Z_ORDER" pz="100"/>
+      		<post_mod_action ID="1" type="CHANGE_Z_ORDER" pz="1"/>
+      		<post_mod_action ID="4" type="CHANGE_SCENE" next_scene="Credits"/>
+  		</event_handler>    
+   	</sprite> 
+   	<!-- Version Tag-->  
+   	<sprite ID="109" width="200" height="50" px="20" py="750" pz="20" type="NULL_SPRITE">
+   		<text   ID="10901" message="V.10.NB"   px="0" py="0" pz="20" scale="0.5" resourceName="Graystroke_Regular" type="RESOURCE" h_alignment="CENTER" v_alignment="CENTER"></text>	
+   	</sprite> 	
   </scene>
 </scenes>

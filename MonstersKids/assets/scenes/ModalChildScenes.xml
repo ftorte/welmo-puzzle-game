@@ -42,14 +42,16 @@
 					<post_mod_action ID="5" type="GO_TO_NEXTLEVEL"/>
 				</event_handler>
 			</sprite>
+			
 			<sprite ID="106" px="266" 	py="346" 	width="283" 	height="77" 	pz="10" resourceName="zonetext" 		type="STATIC"></sprite>
-			<sprite ID="107" px="296" 	py="356" 	width="283" 	height="77"   	pz="10" type="NULL_SPRITE">
-				<text   ID="117" message="00:00:00" px="0" py="0" 	pz="20" scale="1" color="Forest_Green" resourceName="Graystroke_Regular" type="SIMPLE" h_alignment="CENTER" v_alignment="CENTER"></text>
+			<sprite ID="107" px="296" 	py="356" 	width="283" 	height="77"   	pz="11" type="NULL_SPRITE">
+				<text   ID="117" message="00:00:00" px="0" py="0" 	pz="12" scale="1" color="Forest_Green" resourceName="Graystroke_Regular" type="SIMPLE" h_alignment="CENTER" v_alignment="CENTER"></text>
 	    	</sprite>
 			<sprite ID="108" px="266" 	py="451" 	width="283" 	height="77" 	pz="10" resourceName="zonetext" 		type="STATIC"></sprite>
-			<sprite ID="109" px="306" 	py="461" 	width="283" 	height="77"    	pz="10" type="NULL_SPRITE">
-				<text   ID="119" message="00000000" px="0" py="0"   pz="20" scale="1" color="Forest_Green" resourceName="Graystroke_Regular" type="SIMPLE" h_alignment="CENTER" v_alignment="CENTER"></text>
+			<sprite ID="109" px="296" 	py="461" 	width="283" 	height="77"    	pz="11" type="NULL_SPRITE">
+				<text   ID="119" message="00000000" px="0" py="0"   pz="12" scale="1" color="Forest_Green" resourceName="Graystroke_Regular" type="SIMPLE" h_alignment="CENTER" v_alignment="CENTER"></text>
 			</sprite>
+			
 			<sprite ID="110" px="216" 	py="313" 	width="101" 	height="119" 	pz="20" resourceName="clock" 			type="STATIC"></sprite>
 			<sprite ID="111" px="215" 	py="438" 	width="108" 	height="101" 	pz="20" resourceName="star" 			type="STATIC"/>
 			

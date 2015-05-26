@@ -54,6 +54,14 @@
             <textureregion name="RgnMonster30" filename="monsters/monster30.png" type="PNG"/>
             <textureregion name="RgnMonster31" filename="monsters/monster31.png" type="PNG"/>
             <textureregion name="RgnMonster32" filename="monsters/monster32.png" type="PNG"/>
+            <textureregion name="RgnMonster33" filename="monsters/monster33.png" type="PNG"/>
+            <textureregion name="RgnMonster34" filename="monsters/monster34.png" type="PNG"/>
+            <textureregion name="RgnMonster35" filename="monsters/monster35.png" type="PNG"/>
+            <textureregion name="RgnMonster36" filename="monsters/monster36.png" type="PNG"/>
+            <textureregion name="RgnMonster37" filename="monsters/monster37.png" type="PNG"/>
+            <textureregion name="RgnMonster38" filename="monsters/monster38.png" type="PNG"/>
+            <textureregion name="RgnMonster39" filename="monsters/monster39.png" type="PNG"/>
+            <textureregion name="RgnMonster40" filename="monsters/monster40.png" type="PNG"/>
         </texture>
        
         <texture name="GUIElements" height="2048" width="2048" autopacking="true">

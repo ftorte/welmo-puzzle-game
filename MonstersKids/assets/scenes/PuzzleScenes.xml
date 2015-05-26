@@ -55,7 +55,7 @@
     		parameter[1] = file image containing the helper image. If null by default the imege helper is the puzzle image
     		parameter[2] = default number of colum for the puzzle
     		parameter[3] = default number of rows for the puzzle
-    		parameter[4] = the father schene to be called when we pess on back scene
+    		parameter[4] = the father schene to be called when we press on back scene
     		parameter[5] = not used
      -->
     
@@ -94,4 +94,13 @@
     <instantiatescene name="PuzzleMonster30" 	masterscene="PuzzleMonster00" parametersList="monsters/monster30_HR.png;null;4;4;MenuPuzzles04,700" licence="monsters_4to24"/>
     <instantiatescene name="PuzzleMonster31" 	masterscene="PuzzleMonster00" parametersList="monsters/monster31_HR.png;null;4;4;MenuPuzzles04,800" licence="monsters_4to24"/>
     <instantiatescene name="PuzzleMonster32" 	masterscene="PuzzleMonster00" parametersList="monsters/monster32_HR.png;null;4;4;MenuPuzzles04,900" licence="monsters_4to24"/>
+    
+    <instantiatescene name="PuzzleMonster33" 	masterscene="PuzzleMonster00" parametersList="monsters/monster33_HR.png;null;4;4;MenuPuzzles05,200" licence="monsters_4to24"/>
+    <instantiatescene name="PuzzleMonster34" 	masterscene="PuzzleMonster00" parametersList="monsters/monster34_HR.png;null;4;4;MenuPuzzles05,300" licence="monsters_4to24"/>
+    <instantiatescene name="PuzzleMonster35" 	masterscene="PuzzleMonster00" parametersList="monsters/monster35_HR.png;null;4;4;MenuPuzzles05,400" licence="monsters_4to24"/>
+    <instantiatescene name="PuzzleMonster36" 	masterscene="PuzzleMonster00" parametersList="monsters/monster36_HR.png;null;4;4;MenuPuzzles05,500" licence="monsters_4to24"/>
+    <instantiatescene name="PuzzleMonster37" 	masterscene="PuzzleMonster00" parametersList="monsters/monster37_HR.png;null;4;4;MenuPuzzles05,600" licence="monsters_4to24"/>
+    <instantiatescene name="PuzzleMonster38" 	masterscene="PuzzleMonster00" parametersList="monsters/monster38_HR.png;null;4;4;MenuPuzzles05,700" licence="monsters_4to24"/>
+    <instantiatescene name="PuzzleMonster39" 	masterscene="PuzzleMonster00" parametersList="monsters/monster39_HR.png;null;4;4;MenuPuzzles05,800" licence="monsters_4to24"/>
+    <instantiatescene name="PuzzleMonster40" 	masterscene="PuzzleMonster00" parametersList="monsters/monster40_HR.png;null;4;4;MenuPuzzles05,900" licence="monsters_4to24"/>
 </scenes>
