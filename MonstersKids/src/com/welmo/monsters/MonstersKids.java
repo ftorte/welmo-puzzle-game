@@ -12,7 +12,6 @@ import android.content.SharedPreferences.Editor;
 import android.util.Log;
 
 import com.welmo.andengine.managers.SceneDescriptorsManager;
-import com.welmo.andengine.managers.SceneManager;
 import com.welmo.andengine.managers.SharedPreferenceManager;
 import com.welmo.andengine.scenes.IConfigurableScene;
 import com.welmo.andengine.scenes.ManageableScene;
@@ -26,7 +25,6 @@ import com.welmo.andengine.utility.inappbilling.Purchase;
 import com.welmo.andengine.utility.inappbilling.PurchasingManager;
 
 
-
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
@@ -34,6 +32,10 @@ import com.welmo.andengine.utility.inappbilling.PurchasingManager;
  * @see SystemUiHider
  */
 public class MonstersKids extends SimpleWelmoActivity {
+	
+	
+	
+	
 	private final static String 		TAG ="MonstersKids";
 	//list of resources file to load while showing the startup file
 	static final HashMap<String ,String> NEXT_SCENE_LAUNCHER = new HashMap<String , String>() {
@@ -71,7 +73,19 @@ public class MonstersKids extends SimpleWelmoActivity {
 	    put("PuzzleMonster29",    "PuzzleMonster30");
 	    put("PuzzleMonster30",    "PuzzleMonster31");
 	    put("PuzzleMonster31",    "PuzzleMonster32");
-	    put("PuzzleMonster32",    "MenuPuzzles04");
+	    put("PuzzleMonster32",    "PuzzleMonster33");
+	    put("PuzzleMonster33",    "PuzzleMonster34");
+	    put("PuzzleMonster34",    "PuzzleMonster35");
+	    put("PuzzleMonster35",    "PuzzleMonster36");
+	    put("PuzzleMonster36",    "PuzzleMonster37");
+	    put("PuzzleMonster37",    "PuzzleMonster38");
+	    put("PuzzleMonster38",    "PuzzleMonster39");
+	    put("PuzzleMonster39",    "PuzzleMonster40");
+	    put("PuzzleMonster40",    "MenuPuzzles05");
+	    
+	    
+	    
+	    
 	}};
 	//list of resources file to load while showing the startup file
 	static final HashMap<String , String> MENU_SCENE_LAUNCHER = new HashMap<String , String>() {
@@ -110,6 +124,14 @@ public class MonstersKids extends SimpleWelmoActivity {
 			put("PuzzleMonster30",    "MenuPuzzles04");
 			put("PuzzleMonster31",    "MenuPuzzles04");
 			put("PuzzleMonster32",    "MenuPuzzles04");
+			put("PuzzleMonster33",    "MenuPuzzles05");
+			put("PuzzleMonster34",    "MenuPuzzles05");
+			put("PuzzleMonster35",    "MenuPuzzles05");
+			put("PuzzleMonster36",    "MenuPuzzles05");
+			put("PuzzleMonster37",    "MenuPuzzles05");
+			put("PuzzleMonster38",    "MenuPuzzles05");
+			put("PuzzleMonster39",    "MenuPuzzles05");
+			put("PuzzleMonster40",    "MenuPuzzles05");
 		}};
 
 		private SharedPreferenceManager 	pSPM=null;
@@ -139,14 +161,14 @@ public class MonstersKids extends SimpleWelmoActivity {
 			"scenes/MenuPuzzles.xml",
 			"scenes/PuzzleScenes.xml",
 			"scenes/ModalChildScenes.xml",
-			"scenes/ConfigureChildScenes.xml"
+			"scenes/ConfigureChildScenes.xml",
+			"scenes/Credits.xml",			
 	};
 	private final String[] particuleSuystemFiles = {
 			"resources/ParticuleSystems.xml"
 	};
-	
 	@Override
-	public void addDefaultProductOwned(Inventory inv){
+	public void initDefaultProduct(){
 
 		String DefaultProduct = new String(
 				"{\"orderId\":\"12999763169054705758.1371079406387615\"," +
@@ -163,7 +185,7 @@ public class MonstersKids extends SimpleWelmoActivity {
 		
 		try {
 			purchase = new Purchase("inapp", DefaultProduct, "");
-			inv.addPurchase(purchase);
+			this.mPurchMgr.addDefaultProductOwned(purchase);
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -194,6 +216,8 @@ public class MonstersKids extends SimpleWelmoActivity {
 				"5G5dGMVByNQj5Wp9TSp0MzGU8O94j7WFAAFfG80J/xO/hm83yG8B2nAUrqPZflVSTJQtwu5YkAhMW9AJATO1Qu" +
 				"qM24fIRWWmswDNcO+0pcGe+0XhdffrcZz5ijZs549xRcNcwN2d0EhfpoZcXuKI9qlCUv4nMTjuqjtmEXizj+a+Sq0X" +
 				"UuYppPqv72aFjP7OM4mTZaPRmvBIETClJWPEf9euKfAdmoYKp7sjLos4OuwIDAQAB");
+	
+		
 	}
 	@Override
 	public Scene onCreateScene() {
@@ -283,7 +307,7 @@ public class MonstersKids extends SimpleWelmoActivity {
 				else
 					theLicence = "default";
 			if(!theLicence.equalsIgnoreCase("default")){
-				if(!mInventory.hasPurchase(theLicence)){		//check if has the licence to show the requested scene
+				if(!mPurchMgr.hasPurchase(theLicence)){		//check if has the licence to show the requested scene
 					newScene = "IAP_monsters_4to24"; 			//if not launch scene to by the lincence	
 					onChangeChildScene(newScene);
 					return;
