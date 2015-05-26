@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scenes xmlns="http://www.example.org/scene">
+
+  <scene name="Credits"  sceneFather="MainMenu" >
+  	
+  	<sprite ID="108" width="649" height="44"  px="300" py="300" pz="20" resourceName="txt_poweredby" type="STATIC"/>	
+  	<sprite ID="109" width="797" height="87"  px="300" py="450" pz="20" resourceName="txt_imagesfrom" type="STATIC"/>  
+  	     	
+  </scene>
+</scenes>
