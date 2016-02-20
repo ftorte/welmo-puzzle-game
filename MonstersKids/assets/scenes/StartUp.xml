@@ -69,7 +69,7 @@
    	</sprite> 
    	<!-- Version Tag-->  
    	<sprite ID="109" width="200" height="50" px="20" py="750" pz="20" type="NULL_SPRITE">
-   		<text   ID="10901" message="V.10.NB"   px="0" py="0" pz="20" scale="0.5" resourceName="Graystroke_Regular" type="RESOURCE" h_alignment="CENTER" v_alignment="CENTER"></text>	
+   		<text   ID="10901" message="V.11.NBF"   px="0" py="0" pz="20" scale="0.5" resourceName="Graystroke_Regular" type="RESOURCE" h_alignment="CENTER" v_alignment="CENTER"></text>	
    	</sprite> 	
   </scene>
 </scenes>

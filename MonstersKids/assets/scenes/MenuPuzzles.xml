@@ -2,7 +2,7 @@
 <scenes xmlns="http://www.example.org/scene">
     <scene name="MenuPuzzles01" sceneFather="MainMenu">
         <scene_launcher_btn isTemplate="true" ID="100" height="200" width="200" pz="10" px="195" py="170" status_default="NotActive" 
-		    licence="monsters_4to24"
+		    licence="default"
 		    back_ground_inactive	="yellow_btn;0;0;200;200"
 		    ico_inactive			="disabled;25;25;150;150"
 			back_ground_final		="yellow_btn;0;0;200;200"
